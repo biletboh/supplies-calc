@@ -30,7 +30,7 @@
           <div class="field">
             <label class="label">Кількість прийомів їжі на день</label>
             <div class="control">
-              <input v-model="foodType.mealCount" class="input" type="number" placeholder="Кількість прийомів їжі на день">
+              <input v-model="foodType.meals" class="input" type="number" placeholder="Кількість прийомів їжі на день">
             </div>
           </div>
           <div>--------------------------------</div>
@@ -67,11 +67,10 @@ export default {
       supplies: {
         days: 1,
         persons: 1,
-        ration: 3,
         foodTypes: [
           {
             name: '',
-            mealCount: null,
+            meals: 1,
             products: [
               {
                 name: '',
@@ -89,7 +88,7 @@ export default {
       this.supplies.foodTypes.push(
         {
           name: '',
-          mealCount: null,
+          meals: 0,
           products: [
             {
               name: '',
@@ -121,9 +120,13 @@ export default {
       for (let foodTypes of this.supplies.foodTypes) {
         for (let product of foodTypes.products) {
           const productsCount = foodTypes.products.length;
-          product["proportion"] = (product.portions / this.supplies.ration / productsCount) * this.supplies.days;
+          console.log(foodTypes.meals)
+          if (foodTypes.meals && product.portions) {
+            product["proportion"] = (foodTypes.meals/ product.portions / productsCount) * this.supplies.days;
+          }
         }
       }
+      this.$emit('calculated', this.supplies)
       return this.supplies
     }
   }

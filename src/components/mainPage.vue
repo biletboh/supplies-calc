@@ -6,8 +6,16 @@
           <div class="hello">
             <h1 class="title">{{ msg }}</h1>
             <p>Скористайтеся простим калькулятором для розрахунку запасів їжі на карантин.</p>
-            <calculator />
           </div>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column">
+          <calculator @calculated="showList"/>
+        </div>
+        <div class="column">
+          <h2>Список продуктів</h2>
+          <p v-for="(supply, index) in supplyList" :key="index">{{ supply.name }} {{ supply.proportion }}</p>
         </div>
       </div>
     </div>
@@ -24,18 +32,25 @@ export default {
   },
   components: {
     calculator
+  },
+  data: function () {
+    return {
+      supplyList: []
+    }
+  },
+  methods: {
+    showList(value) {
+      this.supplyList = []
+      for (let foodTypes of value.foodTypes) {
+        for (let product of foodTypes.products) {
+          this.supplyList.push(product)
+        }
+      }
+    }
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h3 {
-  margin: 48px 0 0;
-}
-
-.calculator {
-  margin: 48px auto;
-  max-width: 480px;
-}
+<style>
 </style>
