@@ -48,7 +48,7 @@
               <div class="field">
                 <label class="label">Порції / день</label>
                 <div class="control">
-                  <input v-model="foodType.meals" @input="$emit('calculate', supplies)" class="input" type="number" placeholder="Кількість прийомів їжі на день">
+                  <input v-model="foodType.meals" @input="$emit('calculate', supplies)" class="input" type="number" placeholder="Кількість">
                 </div>
               </div>
               <div class="empty-space"></div>
