@@ -36,7 +36,7 @@
         </div>
         <div class="supplies-form">
           <div class="columns">
-            <div class="column is-two-thids">
+            <div class="column is-three-fifth">
               <div class="field">
                 <label class="label">Вид продуктів</label>
                 <div class="control">
@@ -44,7 +44,7 @@
                 </div>
               </div>
             </div>
-            <div class="column is-one-third is-inline-flex">
+            <div class="column is-two-fifth is-inline-flex">
               <div class="field">
                 <label class="label">Порції / день</label>
                 <div class="control">
@@ -57,7 +57,7 @@
           <div v-for="(product, productIndex) in foodType.products" :key="productIndex" class="supplies-form">
             <hr>
             <div class="columns">
-              <div class="column is-two-thids">
+              <div class="column is-three-fifth">
                 <div class="field">
                   <label class="label">Назва продукту</label>
                   <div class="control">
@@ -65,9 +65,9 @@
                   </div>
                 </div>
               </div>
-              <div class="column is-one-third is-inline-flex">
+              <div class="column is-two-fifth is-inline-flex">
                 <div class="field">
-                  <label class="label">Порцій в упаковці</label>
+                  <label class="label">Порції / упаковку</label>
                   <div class="control">
                     <input v-model="product.portions" @input="$emit('calculate', supplies)" class="input" type="number" placeholder="Кількість">
                   </div>
