@@ -7,7 +7,7 @@
             <div class="field">
               <label class="label">Дні</label>
               <div class="control">
-                <input v-model="supplies.days" @input="$emit('calculate')" class="input" type="number" placeholder="Кількість днів">
+                <input v-model="supplies.days" @input="$emit('calculate', supplies)" class="input" type="number" placeholder="Кількість днів">
               </div>
             </div>
           </div>
@@ -15,7 +15,7 @@
             <div class="field">
               <label class="label">Люди</label>
               <div class="control">
-                <input v-model="supplies.persons" @input="$emit('calculate')" class="input" type="number" placeholder="Кількість днів">
+                <input v-model="supplies.persons" @input="$emit('calculate', supplies)" class="input" type="number" placeholder="Кількість днів">
               </div>
             </div>
           </div>
@@ -48,7 +48,7 @@
               <div class="field">
                 <label class="label">Порції / день</label>
                 <div class="control">
-                  <input v-model="foodType.meals" @input="$emit('calculate')" class="input" type="number" placeholder="Кількість прийомів їжі на день">
+                  <input v-model="foodType.meals" @input="$emit('calculate', supplies)" class="input" type="number" placeholder="Кількість прийомів їжі на день">
                 </div>
               </div>
               <div class="empty-space"></div>
@@ -61,7 +61,7 @@
                 <div class="field">
                   <label class="label">Назва продукту</label>
                   <div class="control">
-                    <input v-model="product.name" class="input" type="text" placeholder="Назва продукту">
+                    <input v-model="product.name" @input="$emit('calculate', supplies)" class="input" type="text" placeholder="Назва продукту">
                   </div>
                 </div>
               </div>
@@ -69,10 +69,10 @@
                 <div class="field">
                   <label class="label">Порцій в упаковці</label>
                   <div class="control">
-                    <input v-model="product.portions" @input="$emit('calculate')" class="input" type="number" placeholder="Кількість">
+                    <input v-model="product.portions" @input="$emit('calculate', supplies)" class="input" type="number" placeholder="Кількість">
                   </div>
                 </div>
-                <a @click="removeFoodType(index)" class="delete delete-product"></a>
+                <a @click="removeProduct(index, productIndex)" class="delete delete-product"></a>
               </div>
             </div>
           </div>
@@ -97,12 +97,12 @@ export default {
       this.supplies.foodTypes.push(
         {
           name: '',
-          meals: 0,
+          meals: null,
           products: [
             {
               name: '',
               baseQuantity: 1,
-              portions: ''
+              portions: null
             }
           ]
         }
@@ -111,6 +111,7 @@ export default {
 
     removeFoodType(index) {
       this.supplies.foodTypes.splice(index, 1)
+      this.$emit('calculate', this.supplies)
     },
 
     addProduct: function (index) {
@@ -118,13 +119,14 @@ export default {
         {
           name: '',
           baseQuantity: 1,
-          portions: ''
+          portions: null
         }
       )
     },
 
     removeProduct(index, productIndex) {
       this.supplies.foodTypes[index].products.splice(productIndex, 1)
+      this.$emit('calculate', this.supplies)
     }
   }
 }

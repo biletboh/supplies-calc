@@ -44,8 +44,8 @@ export default {
     calculator
   },
 
-  created: function () {
-    this.getSupplyList()
+  mounted: function () {
+    this.getSupplyList(this.supplies)
   },
 
   data: function () {
@@ -73,17 +73,16 @@ export default {
 
   methods: {
 
-    getSupplyList() {
+    getSupplyList(value) {
 
       this.supplyList = []
 
-      for (let foodTypes of this.supplies.foodTypes) {
+      for (let foodTypes of value.foodTypes) {
         for (let product of foodTypes.products) {
           const productsCount = foodTypes.products.length;
 
-          if (foodTypes.meals && product.portions && this.supplies.persons) {
-            console.log(foodTypes.meals, product.portions, productsCount, this.supplies.persons, this.supplies.days)
-            product["proportion"] = (foodTypes.meals/ product.portions / productsCount) * this.supplies.persons * this.supplies.days;
+          if (foodTypes.meals && product.portions && value.persons) {
+            product["proportion"] = (foodTypes.meals/ product.portions / productsCount) * value.persons * value.days;
           }
 
           this.supplyList.push(product)
