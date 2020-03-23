@@ -2,56 +2,85 @@
   <div class="calculator">
     <div class="card">
       <div class="card-content">
-        <div class="field">
-          <label class="label">Кількість днів</label>
-          <div class="control">
-            <input v-model="supplies.days" @input="$emit('calculate')" class="input" type="number" placeholder="Кількість днів">
+        <div class="columns">
+          <div class="column">
+            <div class="field">
+              <label class="label">Дні</label>
+              <div class="control">
+                <input v-model="supplies.days" @input="$emit('calculate')" class="input" type="number" placeholder="Кількість днів">
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="field">
-          <label class="label">Кількість людей</label>
-          <div class="control">
-            <input v-model="supplies.persons" @input="$emit('calculate')" class="input" type="number" placeholder="Кількість днів">
+          <div class="column">
+            <div class="field">
+              <label class="label">Люди</label>
+              <div class="control">
+                <input v-model="supplies.persons" @input="$emit('calculate')" class="input" type="number" placeholder="Кількість днів">
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
     <div class="card" v-for="(foodType, index) in supplies.foodTypes" :key="index">
-      <div class="card-content">
+      <div class="card-content  card-content-products">
+        <div class="products">
+          <div class="columns">
+            <div class="column">
+              <h3 class="subtitle subtitle-products">Продукти</h3>
+            </div>
+            <div class="column has-text-right">
+              <a @click="removeFoodType(index)" class="delete delete-products"></a>
+            </div>
+          </div>
+        </div>
         <div class="supplies-form">
-          <a class="delete"></a>
-          <div class="field">
-            <label class="label">Вид продуктів</label>
-            <div class="control">
-              <input v-model="foodType.name" class="input" type="text" placeholder="Вид продуктів">
-            </div>
-          </div>
-          <div class="field">
-            <label class="label">Кількість прийомів їжі на день</label>
-            <div class="control">
-              <input v-model="foodType.meals" @input="$emit('calculate')" class="input" type="number" placeholder="Кількість прийомів їжі на день">
-            </div>
-          </div>
-          <div>--------------------------------</div>
-          <div v-for="(product, productIndex) in foodType.products" :key="productIndex">
-            <div class="supplies-form">
+          <div class="columns">
+            <div class="column is-two-thids">
               <div class="field">
-                <label class="label">Назва продукту</label>
+                <label class="label">Вид продуктів</label>
                 <div class="control">
-                  <input v-model="product.name" class="input" type="text" placeholder="Назва продукту">
-                </div>
-              </div>
-              <div class="field">
-                <label class="label">Порцій у упаковці</label>
-                <div class="control">
-                  <input v-model="product.portions" @input="$emit('calculate')" class="input" type="number" placeholder="Порцій у упаковці">
+                  <input v-model="foodType.name" class="input" type="text" placeholder="Вид продуктів">
                 </div>
               </div>
             </div>
-            <button @click="addProduct(index)" class="button">Додати продукт</button>
-            <div>--------------------------------</div>
+            <div class="column is-one-third is-inline-flex">
+              <div class="field">
+                <label class="label">Порції / день</label>
+                <div class="control">
+                  <input v-model="foodType.meals" @input="$emit('calculate')" class="input" type="number" placeholder="Кількість прийомів їжі на день">
+                </div>
+              </div>
+              <div class="empty-space"></div>
+            </div>
           </div>
-          <button @click="removeFoodType(index)" class="button">Видалити</button>
+          <div v-for="(product, productIndex) in foodType.products" :key="productIndex" class="supplies-form">
+            <hr>
+            <div class="columns">
+              <div class="column is-two-thids">
+                <div class="field">
+                  <label class="label">Назва продукту</label>
+                  <div class="control">
+                    <input v-model="product.name" class="input" type="text" placeholder="Назва продукту">
+                  </div>
+                </div>
+              </div>
+              <div class="column is-one-third is-inline-flex">
+                <div class="field">
+                  <label class="label">Порцій в упаковці</label>
+                  <div class="control">
+                    <input v-model="product.portions" @input="$emit('calculate')" class="input" type="number" placeholder="Кількість">
+                  </div>
+                </div>
+                <a @click="removeFoodType(index)" class="delete delete-product"></a>
+              </div>
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column">
+              <button @click="addProduct(index)" class="button button-products">Додати продукт</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -101,8 +130,39 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .card {
-  margin-bottom: 32px;
+  margin-bottom: 36px;
+}
+
+.card-content-products {
+  padding-top: 0;
+}
+
+.products {
+  background-color: #80AECA;
+  margin: 24px -24px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.subtitle-products {
+  color: #FFFFFF;
+}
+
+.button-products {
+  margin-top: 24px;
+}
+
+.delete-products {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.delete-product {
+  margin-left: 24px;
+}
+
+.empty-space {
+  margin-left: 42px;
 }
 </style>
