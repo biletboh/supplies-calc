@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <div class="content has-text-centered">
-      <p>Сайт трохи недопилено, але користуватися вже можна.</p>
+      <p>Сайт трохи не допилено, але користуватися вже можна.</p>
       <p>
       <strong>Калькулятор запасів</strong>. Ліцензія <a href="http://opensource.org/licenses/mit-license.php" class="link">MIT</a>.
       </p>
