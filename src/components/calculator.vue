@@ -67,9 +67,20 @@
               </div>
               <div class="column is-two-fifth is-inline-flex">
                 <div class="field">
-                  <label class="label">Порції / упаковку</label>
-                  <div class="control">
+                  <label class="label">Порції</label>
+                  <div class="control is-inline-flex">
                     <input v-model="product.portions" @input="$emit('calculate', supplies)" class="input" type="number" placeholder="Кількість">
+                    <span class="delimiter">/</span>
+                    <div class="select">
+                      <select v-model="product.container" @input="$emit('calculate', supplies)">
+                        <option value="упаковки">1 упаковку</option>
+                        <option value="штуки">1 штуку</option>
+                        <option value="кг">1 кг</option>
+                        <option value="банки">1 банку</option>
+                        <option value="консерви">1 консерву</option>
+                        <option value="пляшки">1 пляшку</option>
+                      </select>
+                    </div>
                   </div>
                 </div>
                 <a @click="removeProduct(index, productIndex)" class="delete delete-product"></a>
@@ -101,7 +112,7 @@ export default {
           products: [
             {
               name: '',
-              baseQuantity: 1,
+              container: 'упаковки',
               portions: null
             }
           ]
@@ -118,7 +129,7 @@ export default {
       this.supplies.foodTypes[index].products.push(
         {
           name: '',
-          baseQuantity: 1,
+          container: 'упаковки',
           portions: null
         }
       )
@@ -166,5 +177,10 @@ export default {
 
 .empty-space {
   margin-left: 42px;
+}
+
+.delimiter {
+  padding: 0 12px;
+  font-size: 24px;
 }
 </style>

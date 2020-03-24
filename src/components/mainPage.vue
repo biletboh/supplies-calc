@@ -17,10 +17,10 @@
           <div class="card">
             <div class="card-content">
               <h2 class="title">Список продуктів</h2>
-              <p>Для розрахунку списку розбийте продукти на групи. Наприклад, крупи, овочі, консерви тощо. До круп можна записати гречку, рис, булгур. Кількість продуктів легше рахувати упаковками (банками, консервами, пляшками). Досить легко прикинути скільки порцій у банці з марнованими огірками та скільки разів на день ми їмо овочі. Логіка нескладна.</p>
+              <p>Для розрахунку списку розбийте продукти на групи. Наприклад, крупи, овочі, консерви тощо. До круп можна записати гречку, рис, булгур. Кількість продуктів можна рахувати упаковками, штуками, кілограмами, банками, консервами або пляшками. Досить легко прикинути скільки порцій у банці з маринованими огірками та скільки разів на день ми їмо овочі. Логіка нескладна.</p>
               <div class="content">
                 <ol type="1">
-                  <li v-for="(supply, index) in supplyList" :key="index">{{ supply.name }} {{ supply.proportion }} шт.</li>
+                  <li v-for="(supply, index) in supplyList" :key="index">{{ supply.name }} {{ supply.proportion }} {{ supply.container }}</li>
                 </ol>
               </div>
             </div>
@@ -62,7 +62,7 @@ export default {
             products: [
               {
                 name: 'Греча',
-                baseQuantity: 1,
+                container: 'кг',
                 portions: 8
               }
             ]
@@ -77,6 +77,7 @@ export default {
     getSupplyList(value) {
 
       this.supplyList = []
+      console.log(value)
 
       for (let foodTypes of value.foodTypes) {
         for (let product of foodTypes.products) {
