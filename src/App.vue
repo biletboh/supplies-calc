@@ -1,16 +1,25 @@
 <template>
   <div id="app">
     <mainPage msg="Рахуємо запаси"/>
+    <methodology />
+    <message />
+    <appFooter />
   </div>
 </template>
 
 <script>
 import mainPage from './components/mainPage.vue'
+import appFooter from './components/footer.vue'
+import methodology from './components/methodology.vue'
+import message from './components/message.vue'
 
 export default {
   name: 'App',
   components: {
-    mainPage
+    mainPage,
+    methodology,
+    message,
+    appFooter
   }
 }
 </script>

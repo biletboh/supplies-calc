@@ -3,7 +3,7 @@
     <div class="container">
       <div class="columns">
         <div class="column">
-          <div class="hello">
+          <div class="info">
             <h1 class="title">{{ msg }}</h1>
             <p class="description">Простий калькулятор допоможе порахувати запаси їжі на карантин. Варто запастися продуктами та іншими необхідними речима на  <a href="https://www.nytimes.com/interactive/2020/world/coronavirus-maps.html" class="link">30 днів</a>. Зробивши підрахунки, ви впевнетеся, що всього достатньо і не будете стимулювати дефіцит.</p>
           </div>
@@ -84,7 +84,7 @@ export default {
           const productsCount = foodTypes.products.length;
 
           if (foodTypes.meals && product.portions && value.persons) {
-            let proportion = (foodTypes.meals/ product.portions / productsCount) * value.persons * value.days
+            let proportion = (foodTypes.meals / product.portions / productsCount) * value.persons * value.days
             proportion = Math.round((proportion + Number.EPSILON) * 100) / 100
             product["proportion"] = proportion
           }
@@ -103,28 +103,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.hello {
-  text-align: center;
-  max-width: 635px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .description {
   margin-bottom: 48px;
-}
-
-.link {
-  color: #1B5F87;
-}
-
-.link:hover {
-  color: #80AECA;
-}
-
-@media (max-width: 575.98px) {
-  .section {
-    padding: 3rem 1rem;
-  }
 }
 </style>

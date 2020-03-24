@@ -1,0 +1,22 @@
+.info {
+  text-align: center;
+  max-width: 635px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.link {
+  color: #1B5F87;
+}
+
+.link:hover,
+.link:focus,
+.link:active {
+  color: #80AECA;
+}
+
+@media (max-width: 575.98px) {
+  .section {
+    padding: 3rem 1rem;
+  }
+}
