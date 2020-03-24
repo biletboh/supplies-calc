@@ -102,7 +102,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style>
+<style scoped>
 .hello {
   text-align: center;
   max-width: 635px;
@@ -120,5 +120,11 @@ export default {
 
 .link:hover {
   color: #80AECA;
+}
+
+@media (max-width: 575.98px) {
+  .section {
+    padding: 3rem 1rem;
+  }
 }
 </style>

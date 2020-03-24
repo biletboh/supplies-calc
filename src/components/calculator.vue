@@ -104,7 +104,7 @@
         </div>
       </div>
     </div>
-    <button @click="addFoodType" class="button">Додати вид продуктів</button>
+    <button @click="addFoodType" class="button add-products">Додати вид продуктів</button>
   </div>
 </template>
 
@@ -208,5 +208,15 @@ export default {
 
 .portions {
   display: flex;
+}
+
+.add-products {
+  margin-bottom: 24px;
+}
+
+@media (max-width: 575.98px) {
+  .delete-container {
+    padding-right: 28px;
+  }
 }
 </style>
