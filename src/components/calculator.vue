@@ -72,19 +72,20 @@
                   </div>
                 </div>
                 <div class="column is-two-fifth">
-                  <div class="field">
-                    <label class="label">Порції</label>
-                    <div class="control portions">
+                  <label class="label">Порції</label>
+                  <div class="field has-addons has-addons-right">
+                    <div class="control">
                       <input v-model="product.portions" @input="$emit('calculate', supplies)" class="input" type="number" placeholder="Кількість">
-                      <div class="delimiter">/</div>
+                    </div>
+                    <div class="control">
                       <div class="select">
                         <select v-model="product.container" @input="$emit('calculate', supplies)">
-                          <option value="упаковки">1 упаковку</option>
-                          <option value="штуки">1 штуку</option>
-                          <option value="кг">1 кг</option>
-                          <option value="банки">1 банку</option>
-                          <option value="консерви">1 консерву</option>
-                          <option value="пляшки">1 пляшку</option>
+                          <option value="упаковки">на 1 упаковку</option>
+                          <option value="штуки">на 1 штуку</option>
+                          <option value="кг">на 1 кг</option>
+                          <option value="банки">на 1 банку</option>
+                          <option value="консерви">на 1 консерву</option>
+                          <option value="пляшки">на 1 пляшку</option>
                         </select>
                       </div>
                     </div>
@@ -204,10 +205,6 @@ export default {
 .delimiter {
   padding: 0 12px;
   font-size: 24px;
-}
-
-.portions {
-  display: flex;
 }
 
 .add-products {
