@@ -7,7 +7,7 @@
             <div class="field">
               <label class="label">Дні</label>
               <div class="control">
-                <input v-model="supplies.days" @input="$emit('calculate', supplies)" class="input" type="number" placeholder="Кількість днів">
+                <input v-model="supplies.days" @input="$emit('calculate', supplies)" class="input" type="number" placeholder="Кількість">
               </div>
             </div>
           </div>
@@ -15,7 +15,7 @@
             <div class="field">
               <label class="label">Люди</label>
               <div class="control">
-                <input v-model="supplies.persons" @input="$emit('calculate', supplies)" class="input" type="number" placeholder="Кількість днів">
+                <input v-model="supplies.persons" @input="$emit('calculate', supplies)" class="input" type="number" placeholder="Кількість">
               </div>
             </div>
           </div>
@@ -75,7 +75,7 @@
                   <label class="label">Порції</label>
                   <div class="field has-addons has-addons-right">
                     <div class="control">
-                      <input v-model="product.portions" @input="$emit('calculate', supplies)" class="input" type="number" placeholder="Кількість">
+                      <input v-model="product.portions" @input="$emit('calculate', supplies)" class="input" type="number" placeholder="">
                     </div>
                     <div class="control">
                       <div class="select">
