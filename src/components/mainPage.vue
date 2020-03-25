@@ -77,7 +77,6 @@ export default {
     getSupplyList(value) {
 
       this.supplyList = []
-      console.log(value)
 
       for (let foodTypes of value.foodTypes) {
         for (let product of foodTypes.products) {
