@@ -5,15 +5,32 @@
   margin-right: auto;
 }
 
+
 .link {
   color: #1B5F87;
 }
+
 
 .link:hover,
 .link:focus,
 .link:active {
   color: #80AECA;
 }
+
+
+.card-header {
+  background-color: #80AECA;
+  box-shadow: none;
+}
+
+
+.card-header-title {
+  color: #FFFFFF;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
 
 @media (max-width: 575.98px) {
   .section {

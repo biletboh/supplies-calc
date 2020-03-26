@@ -1,19 +1,13 @@
 <template>
   <div class="calculator">
     <div class="card">
-      <div class="card-content card-content-products">
-        <div class="products">
-          <div class="delete-container">
-            <div class="columns">
-              <div class="column">
-                <h3 class="subtitle subtitle-products">Порахувати</h3>
-              </div>
-            </div>
-            <div class="delete-on-side">
-              <a @click="resetSupplies()" class="delete delete-products"></a>
-            </div>
-          </div>
+      <header class="card-header">
+        <h3 class="card-header-title">Порахувати</h3>
+        <div class="card-header-icon">
+          <a @click="resetSupplies()" class="delete delete-products"></a>
         </div>
+      </header>
+      <div class="card-content">
         <div class="supplies-form">
           <div class="delete-container">
             <div class="columns">
@@ -53,19 +47,13 @@
       </div>
     </div>
     <div class="card" v-for="(foodType, index) in supplies.foodTypes" :key="index">
-      <div class="card-content card-content-products">
-        <div class="products">
-          <div class="delete-container">
-            <div class="columns">
-              <div class="column">
-                <h3 class="subtitle subtitle-products">Продукти</h3>
-              </div>
-            </div>
-            <div class="delete-on-side">
-              <a @click="removeFoodType(index)" class="delete delete-products"></a>
-            </div>
-          </div>
+      <header class="card-header">
+        <h3 class="card-header-title">Продукти</h3>
+        <div class="card-header-icon">
+          <a @click="removeFoodType(index)" class="delete delete-products"></a>
         </div>
+      </header>
+      <div class="card-content">
         <div class="supplies-form">
           <div class="delete-container">
             <div class="columns">
@@ -199,6 +187,7 @@ export default {
       this.supplies.days = 1
       this.supplies.persons = 1
       this.supplies.foodTypes = []
+      this.selectedTemplate = ''
       this.$emit('calculate', this.supplies)
     }
   }
@@ -208,21 +197,6 @@ export default {
 <style scoped>
 .card {
   margin-bottom: 36px;
-}
-
-.card-content-products {
-  padding-top: 0;
-}
-
-.products {
-  background-color: #80AECA;
-  margin: 24px -24px;
-  padding-left: 24px;
-  padding-right: 24px;
-}
-
-.subtitle-products {
-  color: #FFFFFF;
 }
 
 .button-products {

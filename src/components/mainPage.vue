@@ -39,14 +39,16 @@
             />
         </div>
         <div class="column is-one-third-tablet is-half-widescreen">
-          <div class="card product-list-card">
+          <div class="card">
+            <header class="card-header card-header-product-list">
+              <h2 id="productList" class="card-header-title">Список продуктів</h2>
+            </header>
             <div class="card-content">
-              <h2 id="productList" class="title">Список продуктів</h2>
               <div class="content">
-                <ol type="1">
+                <ol type="1" class="product-list">
                   <li v-for="(supply, index) in supplyList" :key="index">{{ supply.name }} {{ supply.proportion }} {{ supply.container }}</li>
                 </ol>
-                <button class="button" type="button"
+                <button v-if="listToCopy" class="button" type="button"
                         v-clipboard:copy="listToCopy"
                         v-clipboard:success="onCopy"
                         v-clipboard:error="onError">
@@ -231,10 +233,6 @@ export default {
   margin-bottom: 48px;
 }
 
-.product-list-card {
-  margin-top: 12px;
-}
-
 .button-scroll {
   border-radius: 100%;
   padding-right: 11px;
@@ -275,10 +273,22 @@ export default {
   margin: 0 8px;
 }
 
+.card-header-product-list {
+  background-color: #57B887;
+}
+
+.product-list {
+  margin-top: 0;
+}
+
 @media (max-width: 768px) {
   .button-scroll {
     right: 24px;
     bottom: 24px;
+  }
+
+  .description {
+    margin-bottom: 24px;
   }
 }
 </style>
