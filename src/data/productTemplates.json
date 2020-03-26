@@ -1,0 +1,844 @@
+{
+  "basic": {
+    "name": "Базовий",
+    "foodTypes": [
+      {
+        "name": "Крупи та макарони",
+        "meals": 2,
+        "products": [
+          {
+            "name": "Рис",
+            "container": "кг",
+            "portions": 8
+          },
+          {
+            "name": "Греча",
+            "container": "кг",
+            "portions": 8
+          },
+          {
+            "name": "Макарони",
+            "container": "кг",
+            "portions": 8
+          }
+        ]
+      },
+      {
+        "name": "Овочі",
+        "meals": 2,
+        "products": [
+          {
+            "name": "Заможрожене асорті овочів",
+            "container": "упаковки",
+            "portions": 3
+          },
+          {
+            "name": "Кабачкова ікра",
+            "container": "банки",
+            "portions": 6
+          },
+          {
+            "name": "Мариновані огірки",
+            "container": "банки",
+            "portions": 6
+          },
+          {
+            "name": "курурудза",
+            "container": "банки",
+            "portions": 4
+          }
+        ]
+      },
+      {
+        "name": "Білкові продукти",
+        "meals": 2,
+        "products": [
+          {
+            "name": "Яйця",
+            "container": "штуки",
+            "portions": 0.5
+          },
+          {
+            "name": "Сир",
+            "container": "упаковки",
+            "portions": 4
+          },
+          {
+            "name": "Гриби мариновані",
+            "container": "банки",
+            "portions": 4
+          },
+          {
+            "name": "Горошок",
+            "container": "банки",
+            "portions": 4
+          }
+        ]
+      },
+      {
+        "name": "Солодке та фрукти",
+        "meals": 2,
+        "products": [
+          {
+            "name": "Родзинки",
+            "container": "упаковки",
+            "portions": 8
+          },
+          {
+            "name": "Курага",
+            "container": "упаковки",
+            "portions": 4
+          },
+          {
+            "name": "Фінки",
+            "container": "упаковки",
+            "portions": 6
+          },
+          {
+            "name": "Джем",
+            "container": "банки",
+            "portions": 8
+          },
+          {
+            "name": "Шоколад",
+            "container": "штуки",
+            "portions": 4
+          }
+        ]
+      },
+      {
+        "name": "Олія, приправи, соуси",
+        "meals": 2,
+        "products": [
+          {
+            "name": "Олія",
+            "container": "пляшки",
+            "portions": 20
+          },
+          {
+            "name": "Сіль",
+            "container": "упаковки",
+            "portions": 100
+          }
+        ]
+      },
+      {
+        "name": "Цукор",
+        "meals": 5,
+        "products": [
+          {
+            "name": "Цукор",
+            "container": "кг",
+            "portions": 200
+          }
+        ]
+      },
+      {
+        "name": "Напої",
+        "meals": 5,
+        "products": [
+          {
+            "name": "Чай",
+            "container": "упаковки",
+            "portions": 15
+          }
+        ]
+      }
+    ]
+  },
+  "bichPacket": {
+    "name": "Біч-пакет",
+    "foodTypes": [
+      {
+        "name": "Макарони",
+        "meals": 3,
+        "products": [
+          {
+            "name": "Мівіна",
+            "container": "упаковки",
+            "portions": 1
+          }
+        ]
+      },
+      {
+        "name": "Соуси",
+        "meals": 3,
+        "products": [
+          {
+            "name": "Мазік",
+            "container": "упаковки",
+            "portions": 10
+          }
+        ]
+      }
+    ]
+  },
+  "vegan": {
+    "name": "Веган",
+    "foodTypes": [
+      {
+        "name": "Крупи та макарони",
+        "meals": 2,
+        "products": [
+          {
+            "name": "Рис",
+            "container": "кг",
+            "portions": 8
+          },
+          {
+            "name": "Греча",
+            "container": "кг",
+            "portions": 8
+          },
+          {
+            "name": "Макарони",
+            "container": "кг",
+            "portions": 8
+          }
+        ]
+      },
+      {
+        "name": "Овочі",
+        "meals": 2,
+        "products": [
+          {
+            "name": "Заможрожене асорті овочів",
+            "container": "упаковки",
+            "portions": 3
+          },
+          {
+            "name": "Кабачкова ікра",
+            "container": "банки",
+            "portions": 6
+          },
+          {
+            "name": "Мариновані огірки",
+            "container": "банки",
+            "portions": 6
+          },
+          {
+            "name": "курурудза",
+            "container": "банки",
+            "portions": 4
+          }
+        ]
+      },
+      {
+        "name": "Білкові продукти",
+        "meals": 2,
+        "products": [
+          {
+            "name": "Тофу",
+            "container": "упаковки",
+            "portions": 2
+          },
+          {
+            "name": "Соя",
+            "container": "упаковки",
+            "portions": 2
+          },
+          {
+            "name": "Гриби мариновані",
+            "container": "банки",
+            "portions": 4
+          },
+          {
+            "name": "Квасоля",
+            "container": "банки",
+            "portions": 2
+          },
+          {
+            "name": "Горошок",
+            "container": "банки",
+            "portions": 4
+          },
+          {
+            "name": "Нут",
+            "container": "кг",
+            "portions": 8
+          }
+        ]
+      },
+      {
+        "name": "Солодке та фрукти",
+        "meals": 2,
+        "products": [
+          {
+            "name": "Родзинки",
+            "container": "упаковки",
+            "portions": 8
+          },
+          {
+            "name": "Курага",
+            "container": "упаковки",
+            "portions": 4
+          },
+          {
+            "name": "Фінки",
+            "container": "упаковки",
+            "portions": 6
+          },
+          {
+            "name": "Джем",
+            "container": "банки",
+            "portions": 8
+          },
+          {
+            "name": "Шоколад",
+            "container": "штуки",
+            "portions": 4
+          }
+        ]
+      },
+      {
+        "name": "Олія, приправи, соуси",
+        "meals": 2,
+        "products": [
+          {
+            "name": "Олія",
+            "container": "пляшки",
+            "portions": 20
+          },
+          {
+            "name": "Сіль",
+            "container": "упаковки",
+            "portions": 100
+          }
+        ]
+      },
+      {
+        "name": "Цукор",
+        "meals": 5,
+        "products": [
+          {
+            "name": "Цукор",
+            "container": "кг",
+            "portions": 200
+          }
+        ]
+      },
+      {
+        "name": "Напої",
+        "meals": 5,
+        "products": [
+          {
+            "name": "Чай",
+            "container": "упаковки",
+            "portions": 15
+          }
+        ]
+      }
+    ]
+  },
+  "vegetarian": {
+    "name": "Вегетаріанська",
+    "foodTypes": [
+      {
+        "name": "Крупи та макарони",
+        "meals": 2,
+        "products": [
+          {
+            "name": "Рис",
+            "container": "кг",
+            "portions": 8
+          },
+          {
+            "name": "Греча",
+            "container": "кг",
+            "portions": 8
+          },
+          {
+            "name": "Макарони",
+            "container": "кг",
+            "portions": 8
+          }
+        ]
+      },
+      {
+        "name": "Овочі",
+        "meals": 2,
+        "products": [
+          {
+            "name": "Заможрожене асорті овочів",
+            "container": "упаковки",
+            "portions": 3
+          },
+          {
+            "name": "Кабачкова ікра",
+            "container": "банки",
+            "portions": 6
+          },
+          {
+            "name": "Мариновані огірки",
+            "container": "банки",
+            "portions": 6
+          },
+          {
+            "name": "курурудза",
+            "container": "банки",
+            "portions": 4
+          }
+        ]
+      },
+      {
+        "name": "Білкові продукти",
+        "meals": 2,
+        "products": [
+          {
+            "name": "Яйця",
+            "container": "штуки",
+            "portions": 0.5
+          },
+          {
+            "name": "Сир",
+            "container": "упаковки",
+            "portions": 4
+          },
+          {
+            "name": "Тофу",
+            "container": "упаковки",
+            "portions": 2
+          },
+          {
+            "name": "Соя",
+            "container": "упаковки",
+            "portions": 2
+          },
+          {
+            "name": "Гриби мариновані",
+            "container": "банки",
+            "portions": 4
+          },
+          {
+            "name": "Квасоля",
+            "container": "банки",
+            "portions": 2
+          },
+          {
+            "name": "Горошок",
+            "container": "банки",
+            "portions": 4
+          },
+          {
+            "name": "Нут",
+            "container": "кг",
+            "portions": 8
+          }
+        ]
+      },
+      {
+        "name": "Солодке та фрукти",
+        "meals": 2,
+        "products": [
+          {
+            "name": "Родзинки",
+            "container": "упаковки",
+            "portions": 8
+          },
+          {
+            "name": "Курага",
+            "container": "упаковки",
+            "portions": 4
+          },
+          {
+            "name": "Фінки",
+            "container": "упаковки",
+            "portions": 6
+          },
+          {
+            "name": "Джем",
+            "container": "банки",
+            "portions": 8
+          },
+          {
+            "name": "Шоколад",
+            "container": "штуки",
+            "portions": 4
+          }
+        ]
+      },
+      {
+        "name": "Олія, приправи, соуси",
+        "meals": 2,
+        "products": [
+          {
+            "name": "Олія",
+            "container": "пляшки",
+            "portions": 20
+          },
+          {
+            "name": "Сіль",
+            "container": "упаковки",
+            "portions": 100
+          }
+        ]
+      },
+      {
+        "name": "Цукор",
+        "meals": 5,
+        "products": [
+          {
+            "name": "Цукор",
+            "container": "кг",
+            "portions": 200
+          }
+        ]
+      },
+      {
+        "name": "Напої",
+        "meals": 5,
+        "products": [
+          {
+            "name": "Чай",
+            "container": "упаковки",
+            "portions": 15
+          }
+        ]
+      }
+    ]
+  },
+  "meatEater": {
+    "name": "М'ясоїдська",
+    "foodTypes": [
+      {
+        "name": "Крупи та макарони",
+        "meals": 2,
+        "products": [
+          {
+            "name": "Рис",
+            "container": "кг",
+            "portions": 8
+          },
+          {
+            "name": "Греча",
+            "container": "кг",
+            "portions": 8
+          },
+          {
+            "name": "Макарони",
+            "container": "кг",
+            "portions": 8
+          }
+        ]
+      },
+      {
+        "name": "Овочі",
+        "meals": 2,
+        "products": [
+          {
+            "name": "Заможрожене асорті овочів",
+            "container": "упаковки",
+            "portions": 3
+          },
+          {
+            "name": "Кабачкова ікра",
+            "container": "банки",
+            "portions": 6
+          },
+          {
+            "name": "Мариновані огірки",
+            "container": "банки",
+            "portions": 6
+          },
+          {
+            "name": "курурудза",
+            "container": "банки",
+            "portions": 4
+          }
+        ]
+      },
+      {
+        "name": "Білкові продукти",
+        "meals": 2,
+        "products": [
+          {
+            "name": "Яйця",
+            "container": "штуки",
+            "portions": 0.5
+          },
+          {
+            "name": "Сир",
+            "container": "упаковки",
+            "portions": 4
+          },
+          {
+            "name": "Курятина",
+            "container": "кг",
+            "portions": 4
+          },
+          {
+            "name": "Тунець",
+            "container": "консерви",
+            "portions": 2
+          },
+          {
+            "name": "Сардини",
+            "container": "консерви",
+            "portions": 2
+          },
+          {
+            "name": "Гриби мариновані",
+            "container": "банки",
+            "portions": 4
+          },
+          {
+            "name": "Горошок",
+            "container": "банки",
+            "portions": 4
+          }
+        ]
+      },
+      {
+        "name": "Солодке та фрукти",
+        "meals": 2,
+        "products": [
+          {
+            "name": "Родзинки",
+            "container": "упаковки",
+            "portions": 8
+          },
+          {
+            "name": "Курага",
+            "container": "упаковки",
+            "portions": 4
+          },
+          {
+            "name": "Фінки",
+            "container": "упаковки",
+            "portions": 6
+          },
+          {
+            "name": "Джем",
+            "container": "банки",
+            "portions": 8
+          },
+          {
+            "name": "Шоколад",
+            "container": "штуки",
+            "portions": 4
+          }
+        ]
+      },
+      {
+        "name": "Олія, приправи, соуси",
+        "meals": 2,
+        "products": [
+          {
+            "name": "Олія",
+            "container": "пляшки",
+            "portions": 20
+          },
+          {
+            "name": "Сіль",
+            "container": "упаковки",
+            "portions": 100
+          }
+        ]
+      },
+      {
+        "name": "Цукор",
+        "meals": 5,
+        "products": [
+          {
+            "name": "Цукор",
+            "container": "кг",
+            "portions": 200
+          }
+        ]
+      },
+      {
+        "name": "Напої",
+        "meals": 5,
+        "products": [
+          {
+            "name": "Чай",
+            "container": "упаковки",
+            "portions": 15
+          }
+        ]
+      }
+    ]
+  },
+  "pescetarian": {
+    "name": "Пескетаріанська",
+    "foodTypes": [
+      {
+        "name": "Крупи та макарони",
+        "meals": 2,
+        "products": [
+          {
+            "name": "Рис",
+            "container": "кг",
+            "portions": 8
+          },
+          {
+            "name": "Греча",
+            "container": "кг",
+            "portions": 8
+          },
+          {
+            "name": "Макарони",
+            "container": "кг",
+            "portions": 8
+          }
+        ]
+      },
+      {
+        "name": "Овочі",
+        "meals": 2,
+        "products": [
+          {
+            "name": "Заможрожене асорті овочів",
+            "container": "упаковки",
+            "portions": 3
+          },
+          {
+            "name": "Кабачкова ікра",
+            "container": "банки",
+            "portions": 6
+          },
+          {
+            "name": "Мариновані огірки",
+            "container": "банки",
+            "portions": 6
+          },
+          {
+            "name": "курурудза",
+            "container": "банки",
+            "portions": 4
+          }
+        ]
+      },
+      {
+        "name": "Білкові продукти",
+        "meals": 2,
+        "products": [
+          {
+            "name": "Яйця",
+            "container": "штуки",
+            "portions": 0.5
+          },
+          {
+            "name": "Сир",
+            "container": "упаковки",
+            "portions": 4
+          },
+          {
+            "name": "Тофу",
+            "container": "упаковки",
+            "portions": 2
+          },
+          {
+            "name": "Соя",
+            "container": "упаковки",
+            "portions": 2
+          },
+          {
+            "name": "Гриби мариновані",
+            "container": "банки",
+            "portions": 4
+          },
+          {
+            "name": "Квасоля",
+            "container": "банки",
+            "portions": 2
+          },
+          {
+            "name": "Горошок",
+            "container": "банки",
+            "portions": 4
+          },
+          {
+            "name": "Нут",
+            "container": "кг",
+            "portions": 8
+          },
+          {
+            "name": "Тунець",
+            "container": "консерви",
+            "portions": 2
+          },
+          {
+            "name": "Сардини",
+            "container": "консерви",
+            "portions": 2
+          },
+          {
+            "name": "Морожена риба",
+            "container": "кг",
+            "portions": 4
+          }
+        ]
+      },
+      {
+        "name": "Солодке та фрукти",
+        "meals": 2,
+        "products": [
+          {
+            "name": "Родзинки",
+            "container": "упаковки",
+            "portions": 8
+          },
+          {
+            "name": "Курага",
+            "container": "упаковки",
+            "portions": 4
+          },
+          {
+            "name": "Фінки",
+            "container": "упаковки",
+            "portions": 6
+          },
+          {
+            "name": "Джем",
+            "container": "банки",
+            "portions": 8
+          },
+          {
+            "name": "Шоколад",
+            "container": "штуки",
+            "portions": 4
+          }
+        ]
+      },
+      {
+        "name": "Олія, приправи, соуси",
+        "meals": 2,
+        "products": [
+          {
+            "name": "Олія",
+            "container": "пляшки",
+            "portions": 20
+          },
+          {
+            "name": "Сіль",
+            "container": "упаковки",
+            "portions": 100
+          }
+        ]
+      },
+      {
+        "name": "Цукор",
+        "meals": 10,
+        "products": [
+          {
+            "name": "Цукор",
+            "container": "кг",
+            "portions": 200
+          }
+        ]
+      },
+      {
+        "name": "Напої",
+        "meals": 5,
+        "products": [
+          {
+            "name": "Чай",
+            "container": "упаковки",
+            "portions": 15
+          }
+        ]
+      }
+    ]
+  }
+}

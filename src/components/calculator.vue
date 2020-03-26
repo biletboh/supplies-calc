@@ -35,7 +35,11 @@
                       <select v-model="selectedTemplate" @change="setTemplate">
                         <option value="">Без шаблону</option>
                         <option value="basic">Базова</option>
+                        <option value="bichPacket">Біч-пакет</option>
                         <option value="vegan">Веган</option>
+                        <option value="vegaterian">Вегeтаріанська</option>
+                        <option value="meatEater">М'ясоїдська</option>
+                        <option value="pescetarian">Пескетаріанська</option>
                       </select>
                     </div>
                   </div>

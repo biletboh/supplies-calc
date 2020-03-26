@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <mainPage msg="Рахуємо запаси"/>
-    <methodology />
     <message />
+    <methodology />
     <appFooter />
   </div>
 </template>

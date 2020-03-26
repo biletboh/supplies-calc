@@ -65,6 +65,7 @@
 </template>
 
 <script>
+import productTemplates from '../data/productTemplates.json'
 import calculator from './calculator.vue'
 
 export default {
@@ -94,83 +95,7 @@ export default {
         foodTypes: []
       },
       initialTemplate: 'basic',
-      productTemplates: {
-        basic: {
-          name: 'Базовий',
-          foodTypes: [
-            {
-              name: 'Крупи',
-              meals: 2,
-              products: [
-                {
-                  name: 'Греча',
-                  container: 'кг',
-                  portions: 8
-                },
-                {
-                  name: 'Рис',
-                  container: 'кг',
-                  portions: 8
-                }
-              ]
-            },
-            {
-              name: 'Овочі',
-              meals: 2,
-              products: [
-                {
-                  name: 'Заможрожені овочі',
-                  container: 'упаковки',
-                  portions: 8
-                }
-              ]
-            }
-          ],
-        },
-        vegan: {
-          name: 'Веган',
-          foodTypes: [
-            {
-              name: 'Крупи',
-              meals: 2,
-              products: [
-                {
-                  name: 'Греча',
-                  container: 'кг',
-                  portions: 8
-                },
-                {
-                  name: 'Рис',
-                  container: 'кг',
-                  portions: 8
-                }
-              ]
-            },
-            {
-              name: 'Овочі',
-              meals: 2,
-              products: [
-                {
-                  name: 'Заможрожені овочі',
-                  container: 'упаковки',
-                  portions: 8
-                }
-              ]
-            },
-            {
-              name: 'Білки',
-              meals: 2,
-              products: [
-                {
-                  name: 'Нут',
-                  container: 'кг',
-                  portions: 8
-                }
-              ]
-            }
-          ]
-        }
-      }
+      productTemplates: productTemplates
     }
   },
 

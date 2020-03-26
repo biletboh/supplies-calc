@@ -4,6 +4,7 @@
       <p>
       <strong>Калькулятор запасів</strong>. Ліцензія <a href="http://opensource.org/licenses/mit-license.php" class="link">MIT</a>.
       </p>
+      <p><a class="link" href="mailto:suppliescalcnet@gmail.com">suppliescalcnet@gmail.com</a></p>
       <p>
       <span class="icon">
         <a href="https://github.com/biletboh/supplies-calc" class="link">
