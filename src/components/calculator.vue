@@ -263,7 +263,7 @@ export default {
   margin-bottom: 24px;
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 768px) {
   .delete-container {
     padding-right: 28px;
   }

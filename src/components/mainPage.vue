@@ -19,9 +19,9 @@
             />
         </div>
         <div class="column is-one-third-tablet is-half-widescreen">
-          <div class="card">
+          <div class="card product-list-card">
             <div class="card-content">
-              <h2 class="title">Список продуктів</h2>
+              <h2 id="productList" class="title">Список продуктів</h2>
               <div class="content">
                 <ol type="1">
                   <li v-for="(supply, index) in supplyList" :key="index">{{ supply.name }} {{ supply.proportion }} {{ supply.container }}</li>
@@ -38,6 +38,7 @@
         </div>
       </div>
     </div>
+    <a href="#" v-scroll-to="'#productList'" class="button button-scroll"><font-awesome-icon :icon="['fas', 'list']" /></a>
   </section>
 </template>
 
@@ -208,5 +209,42 @@ export default {
 <style scoped>
 .description {
   margin-bottom: 48px;
+}
+
+.product-list-card {
+  margin-top: 12px;
+}
+
+.button-scroll {
+  border-radius: 100%;
+  padding-right: 11px;
+  padding-left: 11px;
+  position: fixed;
+  right: 48px;
+  bottom: 48px;
+  border-color: #57B887;
+  background-color: #57B887;
+  color: #FFFFFF;
+}
+
+.button-scroll:hover,
+.button-scroll:active,
+.button-scroll:focus {
+  border-color: #57B887;
+  background-color: #57B887;
+  color: #FFFFFF;
+}
+
+.button-scroll:focus:not(:active),
+.button-scroll.is-focused:not(:active) {
+  box-shadow: 0 0 0 0.125em rgb(87, 184, 135, 0.25)
+}
+
+
+@media (max-width: 768px) {
+  .button-scroll {
+    right: 24px;
+    bottom: 24px;
+  }
 }
 </style>
