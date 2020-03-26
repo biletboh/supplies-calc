@@ -26,6 +26,12 @@
                 <ol type="1">
                   <li v-for="(supply, index) in supplyList" :key="index">{{ supply.name }} {{ supply.proportion }} {{ supply.container }}</li>
                 </ol>
+                <button class="button" type="button"
+                        v-clipboard:copy="listToCopy"
+                        v-clipboard:success="onCopy"
+                        v-clipboard:error="onError">
+                  {{ copyState }}
+                </button>
               </div>
             </div>
           </div>
@@ -57,6 +63,8 @@ export default {
   data: function () {
     return {
       supplyList: [],
+      listToCopy: '',
+      copyState: 'Скопіювати',
       supplies: {
         days: 7,
         persons: 1,
@@ -169,7 +177,28 @@ export default {
         }
       }
 
+      this.makeListToCopy(this.supplyList)
+
       return this.supplyList
+    },
+
+    makeListToCopy(supplyList) {
+      let toCopy = ``
+      this.copyState = 'Скопіювати'
+      for (const item in supplyList) {
+        const count = Number(item) + 1
+        toCopy += `${count}. ${supplyList[item].name} ${supplyList[item].proportion} ${supplyList[item].container}` + '\n'
+      }
+      this.listToCopy = toCopy
+
+    },
+
+    onCopy: function() {
+      this.copyState = 'Скопійовано!'
+    },
+
+    onError: function(e) {
+      alert('Не вдалося скопіювати текст: ', e.text)
     }
   }
 }
