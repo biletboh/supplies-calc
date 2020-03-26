@@ -14,33 +14,37 @@
             </div>
           </div>
         </div>
-        <div class="columns">
-          <div class="column">
-            <div class="field">
-              <label class="label">Дні</label>
-              <div class="control">
-                <input v-model="supplies.days" @input="$emit('calculate', supplies)" class="input" type="number" placeholder="Кількість">
+        <div class="supplies-form">
+          <div class="delete-container">
+            <div class="columns">
+              <div class="column">
+                <div class="field">
+                  <label class="label">Дні</label>
+                  <div class="control">
+                    <input v-model="supplies.days" @input="$emit('calculate', supplies)" class="input" type="number" placeholder="Кількість">
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="column">
-            <div class="field">
-              <label class="label">Люди</label>
-              <div class="control">
-                <input v-model="supplies.persons" @input="$emit('calculate', supplies)" class="input" type="number" placeholder="Кількість">
+              <div class="column">
+                <div class="field">
+                  <label class="label">Люди</label>
+                  <div class="control">
+                    <input v-model="supplies.persons" @input="$emit('calculate', supplies)" class="input" type="number" placeholder="Кількість">
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="column">
-            <div class="field">
-              <label class="label">Дієти</label>
-              <div class="control">
-                <div class="select">
-                  <select v-model="selectedTemplate" @change="setTemplate">
-                    <option value="">Без шаблону</option>
-                    <option value="basic">Базова</option>
-                    <option value="vegan">Веган</option>
-                  </select>
+              <div class="column">
+                <div class="field">
+                  <label class="label">Дієти</label>
+                  <div class="control">
+                    <div class="select">
+                      <select v-model="selectedTemplate" @change="setTemplate">
+                        <option value="">Без шаблону</option>
+                        <option value="basic">Базова</option>
+                        <option value="vegan">Веган</option>
+                      </select>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -99,7 +103,7 @@
                 </div>
                 <div class="column is-two-fifth">
                   <label class="label">Порції</label>
-                  <div class="field has-addons has-addons-right">
+                  <div class="field has-addons">
                     <div class="control">
                       <input v-model="product.portions" @input="$emit('calculate', supplies)" class="input" type="number" placeholder="">
                     </div>
