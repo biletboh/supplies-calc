@@ -11,13 +11,17 @@
       </div>
       <div class="columns">
         <div class="column">
-          <calculator v-bind:supplies="supplies" @calculate="getSupplyList"/>
+          <calculator
+            v-bind:supplies="supplies"
+            v-bind:initialTemplate="initialTemplate"
+            v-bind:productTemplates="productTemplates"
+            @calculate="getSupplyList"
+            />
         </div>
-        <div class="column">
+        <div class="column is-one-third-tablet is-half-widescreen">
           <div class="card">
             <div class="card-content">
               <h2 class="title">Список продуктів</h2>
-              <p>Для розрахунку списку розбийте продукти на групи. Наприклад, крупи, овочі, консерви тощо. До круп можна записати гречку, рис, булгур. Кількість продуктів можна рахувати упаковками, штуками, кілограмами, банками, консервами або пляшками. Досить легко прикинути скільки порцій у банці з маринованими огірками та скільки разів на день ми їмо овочі. Логіка нескладна.</p>
               <div class="content">
                 <ol type="1">
                   <li v-for="(supply, index) in supplyList" :key="index">{{ supply.name }} {{ supply.proportion }} {{ supply.container }}</li>
@@ -46,6 +50,7 @@ export default {
   },
 
   mounted: function () {
+    this.setTemplate('basic'),
     this.getSupplyList(this.supplies)
   },
 
@@ -55,24 +60,94 @@ export default {
       supplies: {
         days: 7,
         persons: 1,
-        foodTypes: [
-          {
-            name: 'Крупи',
-            meals: 2,
-            products: [
-              {
-                name: 'Греча',
-                container: 'кг',
-                portions: 8
-              }
-            ]
-          }
-        ]
+        foodTypes: []
+      },
+      initialTemplate: 'basic',
+      productTemplates: {
+        basic: {
+          name: 'Базовий',
+          foodTypes: [
+            {
+              name: 'Крупи',
+              meals: 2,
+              products: [
+                {
+                  name: 'Греча',
+                  container: 'кг',
+                  portions: 8
+                },
+                {
+                  name: 'Рис',
+                  container: 'кг',
+                  portions: 8
+                }
+              ]
+            },
+            {
+              name: 'Овочі',
+              meals: 2,
+              products: [
+                {
+                  name: 'Заможрожені овочі',
+                  container: 'упаковки',
+                  portions: 8
+                }
+              ]
+            }
+          ],
+        },
+        vegan: {
+          name: 'Веган',
+          foodTypes: [
+            {
+              name: 'Крупи',
+              meals: 2,
+              products: [
+                {
+                  name: 'Греча',
+                  container: 'кг',
+                  portions: 8
+                },
+                {
+                  name: 'Рис',
+                  container: 'кг',
+                  portions: 8
+                }
+              ]
+            },
+            {
+              name: 'Овочі',
+              meals: 2,
+              products: [
+                {
+                  name: 'Заможрожені овочі',
+                  container: 'упаковки',
+                  portions: 8
+                }
+              ]
+            },
+            {
+              name: 'Білки',
+              meals: 2,
+              products: [
+                {
+                  name: 'Нут',
+                  container: 'кг',
+                  portions: 8
+                }
+              ]
+            }
+          ]
+        }
       }
     }
   },
 
   methods: {
+
+    setTemplate(name) {
+      this.supplies.foodTypes = this.productTemplates[name]['foodTypes']
+    },
 
     getSupplyList(value) {
 

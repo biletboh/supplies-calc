@@ -1,7 +1,19 @@
 <template>
   <div class="calculator">
     <div class="card">
-      <div class="card-content">
+      <div class="card-content card-content-products">
+        <div class="products">
+          <div class="delete-container">
+            <div class="columns">
+              <div class="column">
+                <h3 class="subtitle subtitle-products">Порахувати</h3>
+              </div>
+            </div>
+            <div class="delete-on-side">
+              <a @click="resetSupplies()" class="delete delete-products"></a>
+            </div>
+          </div>
+        </div>
         <div class="columns">
           <div class="column">
             <div class="field">
@@ -16,6 +28,20 @@
               <label class="label">Люди</label>
               <div class="control">
                 <input v-model="supplies.persons" @input="$emit('calculate', supplies)" class="input" type="number" placeholder="Кількість">
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="field">
+              <label class="label">Дієти</label>
+              <div class="control">
+                <div class="select">
+                  <select v-model="selectedTemplate" @change="setTemplate">
+                    <option value="">Без шаблону</option>
+                    <option value="basic">Базова</option>
+                    <option value="vegan">Веган</option>
+                  </select>
+                </div>
               </div>
             </div>
           </div>
@@ -112,7 +138,12 @@
 <script>
 export default {
   name: 'calculator',
-  props: ['supplies'],
+  props: ['supplies', 'initialTemplate', 'productTemplates'],
+  data: function () {
+    return {
+      selectedTemplate: this.initialTemplate
+    }
+  },
   methods: {
     addFoodType: function () {
       this.supplies.foodTypes.push(
@@ -147,6 +178,23 @@ export default {
 
     removeProduct(index, productIndex) {
       this.supplies.foodTypes[index].products.splice(productIndex, 1)
+      this.$emit('calculate', this.supplies)
+    },
+
+    setTemplate() {
+      const name = this.selectedTemplate
+      if (name) {
+        this.supplies.foodTypes = this.productTemplates[name]['foodTypes']
+      } else {
+        this.supplies.foodTypes = []
+      }
+      this.$emit('calculate', this.supplies)
+    },
+
+    resetSupplies() {
+      this.supplies.days = 1
+      this.supplies.persons = 1
+      this.supplies.foodTypes = []
       this.$emit('calculate', this.supplies)
     }
   }
