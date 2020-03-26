@@ -11,6 +11,26 @@
       </div>
       <div class="columns">
         <div class="column">
+          <div class="info">
+            <p class="social">Покажіть друзям:
+            <span class="social-buttons">
+              <a href="https://www.facebook.com/share.php?u=https://suppliescalc.net/" class="link">
+                <span class="icon">
+                  <font-awesome-icon :icon="['fab', 'facebook-square']" size="2x" />
+                </span>
+              </a>
+              <a href="https://twitter.com/share?url=https://suppliescalc.net/" class="link">
+                <span class="icon">
+                  <font-awesome-icon :icon="['fab', 'twitter-square']" size="2x" />
+                </span>
+              </a>
+            </span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column">
           <calculator
             v-bind:supplies="supplies"
             v-bind:initialTemplate="initialTemplate"
@@ -240,6 +260,20 @@ export default {
   box-shadow: 0 0 0 0.125em rgb(87, 184, 135, 0.25)
 }
 
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.social-buttons {
+  margin-top: 12px;
+  margin-left: 6px;
+}
+
+.social-buttons .link {
+  margin: 0 8px;
+}
 
 @media (max-width: 768px) {
   .button-scroll {

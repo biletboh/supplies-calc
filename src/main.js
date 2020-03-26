@@ -4,7 +4,7 @@ import VueClipboard from 'vue-clipboard2'
 import VueScrollTo from 'vue-scrollto'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faFacebookSquare, faTwitterSquare } from '@fortawesome/free-brands-svg-icons'
 import { faDivide, faTimes, faList } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
@@ -14,6 +14,8 @@ require('./assets/css/main.css');
 
 library.add(
   faGithub,
+  faFacebookSquare,
+  faTwitterSquare,
   faDivide,
   faTimes,
   faList
