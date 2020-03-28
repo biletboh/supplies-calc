@@ -9,17 +9,23 @@
           {
             "name": "Рис",
             "container": "кг",
-            "portions": 8
+            "portions": 8,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Греча",
             "container": "кг",
-            "portions": 8
+            "portions": 8,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Макарони",
             "container": "кг",
-            "portions": 8
+            "portions": 8,
+            "type": "base",
+            "quantity": null
           }
         ]
       },
@@ -28,24 +34,32 @@
         "meals": 2,
         "products": [
           {
-            "name": "Заможрожене асорті овочів",
+            "name": "Заморожене асорті овочів",
             "container": "упаковки",
-            "portions": 3
+            "portions": 3,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Кабачкова ікра",
             "container": "банки",
-            "portions": 6
+            "portions": 6,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Мариновані огірки",
             "container": "банки",
-            "portions": 6
+            "portions": 6,
+            "type": "base",
+            "quantity": null
           },
           {
-            "name": "курурудза",
+            "name": "Кукурудза",
             "container": "банки",
-            "portions": 4
+            "portions": 4,
+            "type": "base",
+            "quantity": null
           }
         ]
       },
@@ -56,22 +70,30 @@
           {
             "name": "Яйця",
             "container": "штуки",
-            "portions": 0.5
+            "portions": 0.5,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Сир",
             "container": "упаковки",
-            "portions": 4
+            "portions": 4,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Гриби мариновані",
             "container": "банки",
-            "portions": 4
+            "portions": 4,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Горошок",
             "container": "банки",
-            "portions": 4
+            "portions": 4,
+            "type": "base",
+            "quantity": null
           }
         ]
       },
@@ -82,43 +104,63 @@
           {
             "name": "Родзинки",
             "container": "упаковки",
-            "portions": 8
+            "portions": 8,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Курага",
             "container": "упаковки",
-            "portions": 4
+            "portions": 4,
+            "type": "base",
+            "quantity": null
           },
           {
-            "name": "Фінки",
+            "name": "Фініки",
             "container": "упаковки",
-            "portions": 6
+            "portions": 6,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Джем",
             "container": "банки",
-            "portions": 8
+            "portions": 8,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Шоколад",
             "container": "штуки",
-            "portions": 4
+            "portions": 4,
+            "type": "base",
+            "quantity": null
           }
         ]
       },
       {
-        "name": "Олія, приправи, соуси",
+        "name": "Олія, соуси",
         "meals": 2,
         "products": [
           {
             "name": "Олія",
             "container": "пляшки",
-            "portions": 20
-          },
+            "portions": 20,
+            "type": "base",
+            "quantity": null
+          }
+        ]
+      },
+      {
+        "name": "Приправи",
+        "meals": 2,
+        "products": [
           {
             "name": "Сіль",
             "container": "упаковки",
-            "portions": 100
+            "portions": 100,
+            "type": "base",
+            "quantity": null
           }
         ]
       },
@@ -129,7 +171,9 @@
           {
             "name": "Цукор",
             "container": "кг",
-            "portions": 200
+            "portions": 200,
+            "type": "base",
+            "quantity": null
           }
         ]
       },
@@ -140,7 +184,9 @@
           {
             "name": "Чай",
             "container": "упаковки",
-            "portions": 15
+            "portions": 32,
+            "type": "base",
+            "quantity": null
           }
         ]
       }
@@ -156,7 +202,9 @@
           {
             "name": "Мівіна",
             "container": "упаковки",
-            "portions": 1
+            "portions": 1,
+            "type": "base",
+            "quantity": null
           }
         ]
       },
@@ -167,7 +215,9 @@
           {
             "name": "Мазік",
             "container": "упаковки",
-            "portions": 10
+            "portions": 10,
+            "type": "base",
+            "quantity": null
           }
         ]
       }
@@ -183,17 +233,23 @@
           {
             "name": "Рис",
             "container": "кг",
-            "portions": 8
+            "portions": 8,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Греча",
             "container": "кг",
-            "portions": 8
+            "portions": 8,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Макарони",
             "container": "кг",
-            "portions": 8
+            "portions": 8,
+            "type": "base",
+            "quantity": null
           }
         ]
       },
@@ -202,24 +258,32 @@
         "meals": 2,
         "products": [
           {
-            "name": "Заможрожене асорті овочів",
+            "name": "Заморожене асорті овочів",
             "container": "упаковки",
-            "portions": 3
+            "portions": 3,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Кабачкова ікра",
             "container": "банки",
-            "portions": 6
+            "portions": 6,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Мариновані огірки",
             "container": "банки",
-            "portions": 6
+            "portions": 6,
+            "type": "base",
+            "quantity": null
           },
           {
-            "name": "курурудза",
+            "name": "Кукурудза",
             "container": "банки",
-            "portions": 4
+            "portions": 4,
+            "type": "base",
+            "quantity": null
           }
         ]
       },
@@ -230,32 +294,44 @@
           {
             "name": "Тофу",
             "container": "упаковки",
-            "portions": 2
+            "portions": 2,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Соя",
             "container": "упаковки",
-            "portions": 2
+            "portions": 2,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Гриби мариновані",
             "container": "банки",
-            "portions": 4
+            "portions": 4,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Квасоля",
             "container": "банки",
-            "portions": 2
+            "portions": 2,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Горошок",
             "container": "банки",
-            "portions": 4
+            "portions": 4,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Нут",
             "container": "кг",
-            "portions": 8
+            "portions": 8,
+            "type": "base",
+            "quantity": null
           }
         ]
       },
@@ -266,43 +342,63 @@
           {
             "name": "Родзинки",
             "container": "упаковки",
-            "portions": 8
+            "portions": 8,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Курага",
             "container": "упаковки",
-            "portions": 4
+            "portions": 4,
+            "type": "base",
+            "quantity": null
           },
           {
-            "name": "Фінки",
+            "name": "Фініки",
             "container": "упаковки",
-            "portions": 6
+            "portions": 6,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Джем",
             "container": "банки",
-            "portions": 8
+            "portions": 8,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Шоколад",
             "container": "штуки",
-            "portions": 4
+            "portions": 4,
+            "type": "base",
+            "quantity": null
           }
         ]
       },
       {
-        "name": "Олія, приправи, соуси",
+        "name": "Олія, соуси",
         "meals": 2,
         "products": [
           {
             "name": "Олія",
             "container": "пляшки",
-            "portions": 20
-          },
+            "portions": 20,
+            "type": "base",
+            "quantity": null
+          }
+        ]
+      },
+      {
+        "name": "Приправи",
+        "meals": 2,
+        "products": [
           {
             "name": "Сіль",
             "container": "упаковки",
-            "portions": 100
+            "portions": 100,
+            "type": "base",
+            "quantity": null
           }
         ]
       },
@@ -313,7 +409,9 @@
           {
             "name": "Цукор",
             "container": "кг",
-            "portions": 200
+            "portions": 200,
+            "type": "base",
+            "quantity": null
           }
         ]
       },
@@ -324,7 +422,9 @@
           {
             "name": "Чай",
             "container": "упаковки",
-            "portions": 15
+            "portions": 32,
+            "type": "base",
+            "quantity": null
           }
         ]
       }
@@ -340,17 +440,23 @@
           {
             "name": "Рис",
             "container": "кг",
-            "portions": 8
+            "portions": 8,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Греча",
             "container": "кг",
-            "portions": 8
+            "portions": 8,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Макарони",
             "container": "кг",
-            "portions": 8
+            "portions": 8,
+            "type": "base",
+            "quantity": null
           }
         ]
       },
@@ -359,24 +465,32 @@
         "meals": 2,
         "products": [
           {
-            "name": "Заможрожене асорті овочів",
+            "name": "Заморожене асорті овочів",
             "container": "упаковки",
-            "portions": 3
+            "portions": 3,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Кабачкова ікра",
             "container": "банки",
-            "portions": 6
+            "portions": 6,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Мариновані огірки",
             "container": "банки",
-            "portions": 6
+            "portions": 6,
+            "type": "base",
+            "quantity": null
           },
           {
-            "name": "курурудза",
+            "name": "Кукурудза",
             "container": "банки",
-            "portions": 4
+            "portions": 4,
+            "type": "base",
+            "quantity": null
           }
         ]
       },
@@ -387,42 +501,58 @@
           {
             "name": "Яйця",
             "container": "штуки",
-            "portions": 0.5
+            "portions": 0.5,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Сир",
             "container": "упаковки",
-            "portions": 4
+            "portions": 4,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Тофу",
             "container": "упаковки",
-            "portions": 2
+            "portions": 2,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Соя",
             "container": "упаковки",
-            "portions": 2
+            "portions": 2,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Гриби мариновані",
             "container": "банки",
-            "portions": 4
+            "portions": 4,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Квасоля",
             "container": "банки",
-            "portions": 2
+            "portions": 2,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Горошок",
             "container": "банки",
-            "portions": 4
+            "portions": 4,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Нут",
             "container": "кг",
-            "portions": 8
+            "portions": 8,
+            "type": "base",
+            "quantity": null
           }
         ]
       },
@@ -433,43 +563,63 @@
           {
             "name": "Родзинки",
             "container": "упаковки",
-            "portions": 8
+            "portions": 8,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Курага",
             "container": "упаковки",
-            "portions": 4
+            "portions": 4,
+            "type": "base",
+            "quantity": null
           },
           {
-            "name": "Фінки",
+            "name": "Фініки",
             "container": "упаковки",
-            "portions": 6
+            "portions": 6,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Джем",
             "container": "банки",
-            "portions": 8
+            "portions": 8,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Шоколад",
             "container": "штуки",
-            "portions": 4
+            "portions": 4,
+            "type": "base",
+            "quantity": null
           }
         ]
       },
       {
-        "name": "Олія, приправи, соуси",
+        "name": "Олія, соуси",
         "meals": 2,
         "products": [
           {
             "name": "Олія",
             "container": "пляшки",
-            "portions": 20
-          },
+            "portions": 20,
+            "type": "base",
+            "quantity": null
+          }
+        ]
+      },
+      {
+        "name": "Приправи",
+        "meals": 2,
+        "products": [
           {
             "name": "Сіль",
             "container": "упаковки",
-            "portions": 100
+            "portions": 100,
+            "type": "base",
+            "quantity": null
           }
         ]
       },
@@ -480,7 +630,9 @@
           {
             "name": "Цукор",
             "container": "кг",
-            "portions": 200
+            "portions": 200,
+            "type": "base",
+            "quantity": null
           }
         ]
       },
@@ -491,7 +643,9 @@
           {
             "name": "Чай",
             "container": "упаковки",
-            "portions": 15
+            "portions": 32,
+            "type": "base",
+            "quantity": null
           }
         ]
       }
@@ -507,17 +661,23 @@
           {
             "name": "Рис",
             "container": "кг",
-            "portions": 8
+            "portions": 8,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Греча",
             "container": "кг",
-            "portions": 8
+            "portions": 8,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Макарони",
             "container": "кг",
-            "portions": 8
+            "portions": 8,
+            "type": "base",
+            "quantity": null
           }
         ]
       },
@@ -526,24 +686,32 @@
         "meals": 2,
         "products": [
           {
-            "name": "Заможрожене асорті овочів",
+            "name": "Заморожене асорті овочів",
             "container": "упаковки",
-            "portions": 3
+            "portions": 3,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Кабачкова ікра",
             "container": "банки",
-            "portions": 6
+            "portions": 6,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Мариновані огірки",
             "container": "банки",
-            "portions": 6
+            "portions": 6,
+            "type": "base",
+            "quantity": null
           },
           {
-            "name": "курурудза",
+            "name": "Кукурудза",
             "container": "банки",
-            "portions": 4
+            "portions": 4,
+            "type": "base",
+            "quantity": null
           }
         ]
       },
@@ -554,37 +722,58 @@
           {
             "name": "Яйця",
             "container": "штуки",
-            "portions": 0.5
+            "portions": 0.5,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Сир",
             "container": "упаковки",
-            "portions": 4
+            "portions": 4,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Курятина",
             "container": "кг",
-            "portions": 4
+            "portions": 4,
+            "type": "base",
+            "quantity": null
+          },
+          {
+            "name": "М'ясо",
+            "container": "кг",
+            "portions": 4,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Тунець",
             "container": "консерви",
-            "portions": 2
+            "portions": 2,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Сардини",
             "container": "консерви",
-            "portions": 2
+            "portions": 2,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Гриби мариновані",
             "container": "банки",
-            "portions": 4
+            "portions": 4,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Горошок",
             "container": "банки",
-            "portions": 4
+            "portions": 4,
+            "type": "base",
+            "quantity": null
           }
         ]
       },
@@ -595,43 +784,63 @@
           {
             "name": "Родзинки",
             "container": "упаковки",
-            "portions": 8
+            "portions": 8,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Курага",
             "container": "упаковки",
-            "portions": 4
+            "portions": 4,
+            "type": "base",
+            "quantity": null
           },
           {
-            "name": "Фінки",
+            "name": "Фініки",
             "container": "упаковки",
-            "portions": 6
+            "portions": 6,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Джем",
             "container": "банки",
-            "portions": 8
+            "portions": 8,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Шоколад",
             "container": "штуки",
-            "portions": 4
+            "portions": 4,
+            "type": "base",
+            "quantity": null
           }
         ]
       },
       {
-        "name": "Олія, приправи, соуси",
+        "name": "Олія, соуси",
         "meals": 2,
         "products": [
           {
             "name": "Олія",
             "container": "пляшки",
-            "portions": 20
-          },
+            "portions": 20,
+            "type": "base",
+            "quantity": null
+          }
+        ]
+      },
+      {
+        "name": "Приправи",
+        "meals": 2,
+        "products": [
           {
             "name": "Сіль",
             "container": "упаковки",
-            "portions": 100
+            "portions": 100,
+            "type": "base",
+            "quantity": null
           }
         ]
       },
@@ -642,7 +851,9 @@
           {
             "name": "Цукор",
             "container": "кг",
-            "portions": 200
+            "portions": 200,
+            "type": "base",
+            "quantity": null
           }
         ]
       },
@@ -653,7 +864,9 @@
           {
             "name": "Чай",
             "container": "упаковки",
-            "portions": 15
+            "portions": 32,
+            "type": "base",
+            "quantity": null
           }
         ]
       }
@@ -669,17 +882,23 @@
           {
             "name": "Рис",
             "container": "кг",
-            "portions": 8
+            "portions": 8,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Греча",
             "container": "кг",
-            "portions": 8
+            "portions": 8,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Макарони",
             "container": "кг",
-            "portions": 8
+            "portions": 8,
+            "type": "base",
+            "quantity": null
           }
         ]
       },
@@ -688,24 +907,32 @@
         "meals": 2,
         "products": [
           {
-            "name": "Заможрожене асорті овочів",
+            "name": "Заморожене асорті овочів",
             "container": "упаковки",
-            "portions": 3
+            "portions": 3,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Кабачкова ікра",
             "container": "банки",
-            "portions": 6
+            "portions": 6,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Мариновані огірки",
             "container": "банки",
-            "portions": 6
+            "portions": 6,
+            "type": "base",
+            "quantity": null
           },
           {
-            "name": "курурудза",
+            "name": "Кукурудза",
             "container": "банки",
-            "portions": 4
+            "portions": 4,
+            "type": "base",
+            "quantity": null
           }
         ]
       },
@@ -716,57 +943,79 @@
           {
             "name": "Яйця",
             "container": "штуки",
-            "portions": 0.5
+            "portions": 0.5,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Сир",
             "container": "упаковки",
-            "portions": 4
+            "portions": 4,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Тофу",
             "container": "упаковки",
-            "portions": 2
+            "portions": 2,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Соя",
             "container": "упаковки",
-            "portions": 2
+            "portions": 2,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Гриби мариновані",
             "container": "банки",
-            "portions": 4
+            "portions": 4,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Квасоля",
             "container": "банки",
-            "portions": 2
+            "portions": 2,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Горошок",
             "container": "банки",
-            "portions": 4
+            "portions": 4,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Нут",
             "container": "кг",
-            "portions": 8
+            "portions": 8,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Тунець",
             "container": "консерви",
-            "portions": 2
+            "portions": 2,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Сардини",
             "container": "консерви",
-            "portions": 2
+            "portions": 2,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Морожена риба",
             "container": "кг",
-            "portions": 4
+            "portions": 4,
+            "type": "base",
+            "quantity": null
           }
         ]
       },
@@ -777,43 +1026,63 @@
           {
             "name": "Родзинки",
             "container": "упаковки",
-            "portions": 8
+            "portions": 8,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Курага",
             "container": "упаковки",
-            "portions": 4
+            "portions": 4,
+            "type": "base",
+            "quantity": null
           },
           {
-            "name": "Фінки",
+            "name": "Фініки",
             "container": "упаковки",
-            "portions": 6
+            "portions": 6,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Джем",
             "container": "банки",
-            "portions": 8
+            "portions": 8,
+            "type": "base",
+            "quantity": null
           },
           {
             "name": "Шоколад",
             "container": "штуки",
-            "portions": 4
+            "portions": 4,
+            "type": "base",
+            "quantity": null
           }
         ]
       },
       {
-        "name": "Олія, приправи, соуси",
+        "name": "Олія, соуси",
         "meals": 2,
         "products": [
           {
             "name": "Олія",
             "container": "пляшки",
-            "portions": 20
-          },
+            "portions": 20,
+            "type": "base",
+            "quantity": null
+          }
+        ]
+      },
+      {
+        "name": "Приправи",
+        "meals": 2,
+        "products": [
           {
             "name": "Сіль",
             "container": "упаковки",
-            "portions": 100
+            "portions": 100,
+            "type": "base",
+            "quantity": null
           }
         ]
       },
@@ -824,7 +1093,9 @@
           {
             "name": "Цукор",
             "container": "кг",
-            "portions": 200
+            "portions": 200,
+            "type": "base",
+            "quantity": null
           }
         ]
       },
@@ -835,7 +1106,9 @@
           {
             "name": "Чай",
             "container": "упаковки",
-            "portions": 15
+            "portions": 32,
+            "type": "base",
+            "quantity": null
           }
         ]
       }

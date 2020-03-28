@@ -95,7 +95,15 @@ export default {
         foodTypes: []
       },
       initialTemplate: 'basic',
-      productTemplates: productTemplates
+      productTemplates: productTemplates,
+      productTemplatesNames: [
+        'basic',
+        'bichPacket',
+        'vegan',
+        'vegetarian',
+        'meatEater',
+        'pescetarian'
+      ]
     }
   },
 
@@ -113,10 +121,13 @@ export default {
         for (let product of foodTypes.products) {
           const productsCount = foodTypes.products.length;
 
-          if (foodTypes.meals && product.portions && value.persons) {
+          if (product.type == 'base' && foodTypes.meals && product.portions && value.persons) {
             let proportion = (foodTypes.meals / product.portions / productsCount) * value.persons * value.days
             proportion = Math.round((proportion + Number.EPSILON) * 100) / 100
             product["proportion"] = proportion
+          }
+          else if (product.type == 'custom' && product.quantity) {
+            product["proportion"] = product.quantity
           }
 
           if (product.name) {

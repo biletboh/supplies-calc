@@ -52,7 +52,7 @@
     </div>
     <div class="card" v-for="(foodType, index) in supplies.foodTypes" :key="index">
       <header class="card-header">
-        <h3 class="card-header-title">Продукти</h3>
+        <h3 class="card-header-title">Продукти: {{ foodType.name }}</h3>
         <div class="card-header-icon">
           <a @click="removeFoodType(index)" class="delete delete-products"></a>
         </div>
@@ -93,7 +93,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="column is-two-fifth">
+                <div v-if="product.type == 'base'" class="column is-two-fifth">
                   <label class="label">Порції</label>
                   <div class="field has-addons">
                     <div class="control">
@@ -113,6 +113,26 @@
                     </div>
                   </div>
                 </div>
+                <div v-else-if="product.type == 'custom'" class="column is-two-fifth">
+                  <label class="label">Кількість</label>
+                  <div class="field has-addons">
+                    <div class="control">
+                      <input v-model="product.quantity" @input="$emit('calculate', supplies)" class="input" type="number" placeholder="">
+                    </div>
+                    <div class="control">
+                      <div class="select">
+                        <select v-model="product.container" @input="$emit('calculate', supplies)">
+                          <option value="упаковки">упаковки</option>
+                          <option value="штуки">штуки</option>
+                          <option value="кг">кг</option>
+                          <option value="банки">банки</option>
+                          <option value="консерви">консерви</option>
+                          <option value="пляшки">пляшки</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="delete-on-side">
                 <a @click="removeProduct(index, productIndex)" class="delete delete-product"></a>
@@ -121,13 +141,24 @@
           </div>
           <div class="columns">
             <div class="column">
-              <button @click="addProduct(index)" class="button button-products">Додати продукт</button>
+              <div class="field is-grouped button-products">
+                <p class="control">
+                <button @click="addProduct(index)" class="button">Додати продукт</button>
+                </p>
+                <p class="control">
+                <button @click="addCustomProducts(index)" class="button">Додати продукт вручну</button>
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <button @click="addFoodType" class="button add-products">Додати вид продуктів</button>
+    <div class="field is-grouped">
+      <p class="control">
+      <button @click="addFoodType" class="button add-products">Додати вид продуктів</button>
+      </p>
+    </div>
   </div>
 </template>
 
@@ -150,7 +181,9 @@ export default {
             {
               name: '',
               container: 'упаковки',
-              portions: null
+              portions: null,
+              type: 'base',
+              quantity: null
             }
           ]
         }
@@ -162,12 +195,26 @@ export default {
       this.$emit('calculate', this.supplies)
     },
 
-    addProduct: function (index) {
+    addProduct: function(index) {
       this.supplies.foodTypes[index].products.push(
         {
           name: '',
           container: 'упаковки',
-          portions: null
+          portions: null,
+          type: 'base',
+          quantity: null
+        }
+      )
+    },
+
+    addCustomProducts: function(index) {
+      this.supplies.foodTypes[index].products.push(
+        {
+          name: '',
+          container: 'упаковки',
+          portions: null,
+          type: 'custom',
+          quantity: null
         }
       )
     },
