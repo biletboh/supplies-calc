@@ -1,0 +1,44 @@
+{
+  "personalCare":
+  {
+    "name": "Засоби гігієни",
+    "meals": null,
+    "products": [
+      {
+        "name": "Мило",
+        "container": "штуки",
+        "portions": null,
+        "type": "custom",
+        "quantity": 8
+      }
+    ]
+  },
+  "medicine":
+  {
+    "name": "",
+    "meals": null,
+    "products": [
+      {
+        "name": "",
+        "container": "упаковки",
+        "portions": null,
+        "type": "custom",
+        "quantity": null
+      }
+    ]
+  },
+  "alcohol":
+  {
+    "name": "",
+    "meals": null,
+    "products": [
+      {
+        "name": "",
+        "container": "упаковки",
+        "portions": null,
+        "type": "custom",
+        "quantity": null
+      }
+    ]
+  }
+}

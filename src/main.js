@@ -5,7 +5,7 @@ import VueScrollTo from 'vue-scrollto'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faGithub, faFacebookSquare, faTwitterSquare } from '@fortawesome/free-brands-svg-icons'
-import { faDivide, faTimes, faList } from '@fortawesome/free-solid-svg-icons'
+import { faDivide, faTimes, faList, faPlus } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 
@@ -18,6 +18,7 @@ library.add(
   faTwitterSquare,
   faDivide,
   faTimes,
+  faPlus,
   faList
 )
 

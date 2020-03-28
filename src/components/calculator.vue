@@ -46,6 +46,19 @@
                 </div>
               </div>
             </div>
+            <div class="columns">
+              <div class="column">
+                <div class="field  is-grouped">
+                  <p class="control">
+                  <addOnButton
+                    v-bind:supplies="supplies"
+                    v-bind:type="'personalCare'"
+                    @calculate="$emit('calculate', supplies)"
+                    />
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -163,16 +176,25 @@
 </template>
 
 <script>
+import addOnButton from './addOnButton.vue'
+
 export default {
   name: 'calculator',
+
   props: ['supplies', 'initialTemplate', 'productTemplates'],
+
+  components: {
+    addOnButton
+  },
+
   data: function () {
     return {
       selectedTemplate: this.initialTemplate
     }
   },
+
   methods: {
-    addFoodType: function () {
+    addFoodType: function() {
       this.supplies.foodTypes.push(
         {
           name: '',

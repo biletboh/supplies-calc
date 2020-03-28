@@ -191,7 +191,7 @@ export default {
 
 .button-scroll:focus:not(:active),
 .button-scroll.is-focused:not(:active) {
-  box-shadow: 0 0 0 0.125em rgb(87, 184, 135, 0.25)
+  box-shadow: 0 0 0 0.125em rgb(87, 184, 135, 0.25);
 }
 
 .social {
