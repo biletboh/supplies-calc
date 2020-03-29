@@ -36,4 +36,16 @@
   .section {
     padding: 3rem 1rem;
   }
+
+  .is-grouped {
+    flex-direction: column;
+  }
+  .field.is-grouped > .control:not(:last-child){
+    margin-right: 0;
+    margin-bottom: 0.75rem;
+  }
+
+  .is-grouped .button {
+    width: 100%;
+  }
 }

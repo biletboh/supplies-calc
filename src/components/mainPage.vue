@@ -255,5 +255,14 @@ export default {
   .description {
     margin-bottom: 24px;
   }
+
+  .beta {
+    top: -24px;
+  }
+
+
+  .social {
+    flex-direction: column;
+  }
 }
 </style>

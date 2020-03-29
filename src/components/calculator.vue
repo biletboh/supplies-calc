@@ -48,7 +48,7 @@
             </div>
             <div class="columns">
               <div class="column">
-                <div class="field  is-grouped">
+                <div class="field is-grouped">
                   <p class="control">
                   <addOnButton
                     v-bind:supplies="supplies"
@@ -203,10 +203,10 @@
     </div>
     <div class="field is-grouped">
       <p class="control">
-      <button @click="addFoodType('base')" class="button add-products">Додати продукти</button>
+      <button @click="addFoodType('base')" class="button add-products">Додати продукти у порціях</button>
       </p>
       <p class="control">
-      <button @click="addFoodType('longTerm')" class="button add-products">Додати довгострокові продукти</button>
+      <button @click="addFoodType('longTerm')" class="button add-products">Додати продукти на період</button>
       </p>
     </div>
   </div>
@@ -355,6 +355,10 @@ export default {
 @media (max-width: 768px) {
   .delete-container {
     padding-right: 28px;
+  }
+
+  .add-products {
+    margin-bottom: 0;
   }
 }
 </style>
