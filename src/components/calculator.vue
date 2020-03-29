@@ -56,6 +56,20 @@
                     @calculate="$emit('calculate', supplies)"
                     />
                   </p>
+                  <p class="control">
+                  <addOnButton
+                    v-bind:supplies="supplies"
+                    v-bind:type="'medicine'"
+                    @calculate="$emit('calculate', supplies)"
+                    />
+                  </p>
+                  <p class="control">
+                  <addOnButton
+                    v-bind:supplies="supplies"
+                    v-bind:type="'alcohol'"
+                    @calculate="$emit('calculate', supplies)"
+                    />
+                  </p>
                 </div>
               </div>
             </div>
@@ -117,7 +131,10 @@
                         <select v-model.number="product.consumptionRate" @change="$emit('calculate', supplies)">
                           <option value="1">день</option>
                           <option value="7">тиждень</option>
+                          <option value="14">2 тижні</option>
                           <option value="30">місяць</option>
+                          <option value="60">2 місяці</option>
+                          <option value="90">3 місяці</option>
                         </select>
                       </div>
                     </div>

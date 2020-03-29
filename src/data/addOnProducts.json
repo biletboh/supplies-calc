@@ -3,40 +3,323 @@
   {
     "name": "Засоби гігієни",
     "meals": null,
+    "type": "longTerm",
     "products": [
       {
         "name": "Мило",
         "container": "штуки",
-        "portions": 0.15,
-        "type": "template",
-        "quantity": null
-      }
-    ]
-  },
-  "medicine":
-  {
-    "name": "",
-    "meals": null,
-    "products": [
+        "portions": null,
+        "type": "base",
+        "consumptionRate": 14,
+        "quantity": 1
+      },
       {
-        "name": "",
+        "name": "Туалетний папір",
+        "container": "штуки",
+        "portions": null,
+        "type": "base",
+        "consumptionRate": 7,
+        "quantity": 1
+      },
+      {
+        "name": "Мийний засіб",
+        "container": "пляшки",
+        "portions": null,
+        "type": "base",
+        "consumptionRate": 90,
+        "quantity": 1
+      },
+      {
+        "name": "Санітайзер",
+        "container": "пляшки",
+        "portions": null,
+        "type": "base",
+        "consumptionRate": 7,
+        "quantity": 1
+      },
+      {
+        "name": "Засіб для миття раковин",
+        "container": "пляшки",
+        "portions": null,
+        "type": "base",
+        "consumptionRate": 60,
+        "quantity": 1
+      },
+      {
+        "name": "Засіб для миття туалету",
+        "container": "пляшки",
+        "portions": null,
+        "type": "base",
+        "consumptionRate": 60,
+        "quantity": 1
+      },
+      {
+        "name": "Засіб для пробивки раковин (кріт)",
+        "container": "пляшки",
+        "portions": null,
+        "type": "base",
+        "consumptionRate": 30,
+        "quantity": 1
+      },
+      {
+        "name": "Зубна паста",
+        "container": "штуки",
+        "portions": null,
+        "type": "base",
+        "consumptionRate": 30,
+        "quantity": 1
+      },
+      {
+        "name": "Зубна щітка",
+        "container": "штуки",
+        "portions": null,
+        "type": "custom",
+        "consumptionRate": null,
+        "quantity": 1
+      },
+      {
+        "name": "Шампунь",
+        "container": "пляшки",
+        "portions": null,
+        "type": "base",
+        "consumptionRate": 90,
+        "quantity": 1
+      },
+      {
+        "name": "Гель для душу",
+        "container": "пляшки",
+        "portions": null,
+        "type": "base",
+        "consumptionRate": 30,
+        "quantity": 1
+      },
+      {
+        "name": "Крем для рук",
+        "container": "упаковки",
+        "portions": null,
+        "type": "base",
+        "consumptionRate": 30,
+        "quantity": 1
+      },
+      {
+        "name": "Прокладки",
+        "container": "упаковки",
+        "portions": null,
+        "type": "base",
+        "consumptionRate": 30,
+        "quantity": 1
+      },
+      {
+        "name": "Менструальна чаша (замість прокладок)",
         "container": "упаковки",
         "portions": null,
         "type": "custom",
-        "quantity": null
+        "consumptionRate": null,
+        "quantity": 1
       }
     ]
   },
-  "alcohol":
-  {
-    "name": "",
+  "medicine": {
+    "name": "Аптечка",
     "meals": null,
+    "type": "longTerm",
     "products": [
       {
-        "name": "",
+        "name": "Еластичний бинт",
         "container": "упаковки",
         "portions": null,
         "type": "custom",
+        "consumptionRate": null,
+        "quantity": 1
+      },
+      {
+        "name": "Стерильний бинт",
+        "container": "упаковки",
+        "portions": null,
+        "type": "custom",
+        "consumptionRate": null,
+        "quantity": 1
+      },
+      {
+        "name": "Ватні диски",
+        "container": "упаковки",
+        "portions": null,
+        "type": "custom",
+        "consumptionRate": null,
+        "quantity": 1
+      },
+      {
+        "name": "Розчин хлоргексендина",
+        "container": "упаковки",
+        "portions": null,
+        "type": "custom",
+        "consumptionRate": null,
+        "quantity": 1
+      },
+      {
+        "name": "Антисептичний крем",
+        "container": "упаковки",
+        "portions": null,
+        "type": "custom",
+        "consumptionRate": null,
+        "quantity": 1
+      },
+      {
+        "name": "Бактерицидний пластир",
+        "container": "упаковки",
+        "portions": null,
+        "type": "custom",
+        "consumptionRate": null,
+        "quantity": 1
+      },
+      {
+        "name": "Рулонний пластир",
+        "container": "упаковки",
+        "portions": null,
+        "type": "custom",
+        "consumptionRate": null,
+        "quantity": 1
+      },
+      {
+        "name": "Антибіотики (Ципрофлоксацин)",
+        "container": "упаковки",
+        "portions": null,
+        "type": "custom",
+        "consumptionRate": null,
+        "quantity": 1
+      },
+      {
+        "name": "Парацетамол (Піарон)",
+        "container": "упаковки",
+        "portions": null,
+        "type": "custom",
+        "consumptionRate": null,
+        "quantity": 2
+      },
+      {
+        "name": "Німісил",
+        "container": "штуки",
+        "portions": null,
+        "type": "custom",
+        "consumptionRate": null,
+        "quantity": 6
+      },
+      {
+        "name": "Анальгін",
+        "container": "штуки",
+        "portions": null,
+        "type": "custom",
+        "consumptionRate": null,
+        "quantity": 10
+      },
+      {
+        "name": "Аспірин",
+        "container": "штуки",
+        "portions": null,
+        "type": "custom",
+        "consumptionRate": null,
+        "quantity": 10
+      },
+      {
+        "name": "Но-шпа",
+        "container": "штуки",
+        "portions": null,
+        "type": "custom",
+        "consumptionRate": null,
+        "quantity": 10
+      },
+      {
+        "name": "Церукал",
+        "container": "штуки",
+        "portions": null,
+        "type": "custom",
+        "consumptionRate": null,
+        "quantity": 3
+      },
+      {
+        "name": "Лоперамід",
+        "container": "штуки",
+        "portions": null,
+        "type": "custom",
+        "consumptionRate": null,
+        "quantity": 3
+      },
+      {
+        "name": "Атоксил",
+        "container": "банки",
+        "portions": null,
+        "type": "custom",
+        "consumptionRate": null,
+        "quantity": 1
+      },
+      {
+        "name": "Регидрон",
+        "container": "штуки",
+        "portions": null,
+        "type": "custom",
+        "consumptionRate": null,
+        "quantity": 3
+      },
+      {
+        "name": "Сорбекс",
+        "container": "штуки",
+        "portions": null,
+        "type": "custom",
+        "consumptionRate": null,
+        "quantity": 10
+      },
+      {
+        "name": "Дексаметазон",
+        "container": "штуки",
+        "portions": null,
+        "type": "custom",
+        "consumptionRate": null,
+        "quantity": 6
+      },
+      {
+        "name": "Диклофенак",
+        "container": "штуки",
+        "portions": null,
+        "type": "custom",
+        "consumptionRate": null,
+        "quantity": 10
+      },
+      {
+        "name": "Шприци",
+        "container": "штуки",
+        "portions": null,
+        "type": "custom",
+        "consumptionRate": null,
+        "quantity": 3
+      }
+    ]
+  },
+  "alcohol": {
+    "name": "Алкоголь",
+    "meals": 0.6,
+    "products": [
+      {
+        "name": "Пиво",
+        "container": "пляшки",
+        "portions": 0.6,
+        "type": "base",
+        "consumptionRate": null,
+        "quantity": null
+      },
+      {
+        "name": "Вино",
+        "container": "пляшки",
+        "portions": 2,
+        "type": "base",
+        "consumptionRate": null,
+        "quantity": null
+      },
+      {
+        "name": "Горілка",
+        "container": "пляшки",
+        "portions": 4,
+        "type": "base",
+        "consumptionRate": null,
         "quantity": null
       }
     ]
