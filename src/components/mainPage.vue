@@ -1,6 +1,7 @@
 <template>
   <section class="section">
     <div class="container">
+      <div class="beta">Beta-версія</div>
       <div class="columns">
         <div class="column">
           <div class="info">
@@ -120,7 +121,7 @@ export default {
       for (let foodType of value.foodTypes) {
         for (let product of foodType.products) {
 
-          if (value.persons) {
+          if (value.persons && value.days) {
             if (foodType.type == 'longTerm' && product.type != 'custom' && product.quantity && product.consumptionRate) {
               const consumption = value.days / product.consumptionRate
               let proportion = product.quantity * value.persons * consumption
@@ -237,6 +238,12 @@ export default {
 
 .product-list {
   margin-top: 0;
+}
+
+.beta {
+  position: absolute;
+  right: 0;
+  font-size: 18px;
 }
 
 @media (max-width: 768px) {
