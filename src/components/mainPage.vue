@@ -55,6 +55,7 @@
                         v-clipboard:error="onError">
                   {{ copyState }}
                 </button>
+                <p v-if="copyWarning" class="copy-warning has-text-danger">Роздрукуйте або перепишіть список на листок. Користуватися смартфоном в магазині не гігієнічно.</p>
               </div>
             </div>
           </div>
@@ -90,6 +91,7 @@ export default {
       supplyList: [],
       listToCopy: '',
       copyState: 'Скопіювати',
+      copyWarning: false,
       supplies: {
         days: 7,
         persons: 1,
@@ -167,6 +169,7 @@ export default {
     makeListToCopy(supplyList) {
       let toCopy = ``
       this.copyState = 'Скопіювати'
+      this.copyWarning = false
       for (const item in supplyList) {
         const count = Number(item) + 1
         toCopy += `${count}. ${supplyList[item].name} ${supplyList[item].proportion} ${supplyList[item].container}` + '\n'
@@ -177,6 +180,7 @@ export default {
 
     onCopy: function() {
       this.copyState = 'Скопійовано!'
+      this.copyWarning = true
     },
 
     onError: function(e) {
@@ -244,6 +248,10 @@ export default {
   position: absolute;
   right: 0;
   font-size: 18px;
+}
+
+.copy-warning {
+  margin-top: 24px;
 }
 
 @media (max-width: 768px) {
