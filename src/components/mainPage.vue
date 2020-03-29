@@ -13,14 +13,14 @@
       <div class="columns">
         <div class="column">
           <div class="info">
-            <p class="social">Покажіть друзям:
+            <p class="social">Покажіть калькулятор друзям:
             <span class="social-buttons">
               <a href="https://www.facebook.com/share.php?u=https://suppliescalc.net/" class="link">
                 <span class="icon">
                   <font-awesome-icon :icon="['fab', 'facebook-square']" size="2x" />
                 </span>
               </a>
-              <a href="https://twitter.com/share?url=https://suppliescalc.net/" class="link">
+              <a href="https://twitter.com/share?text=Простий калькулятор допоможе порахувати запаси їжі на карантин&url=https://suppliescalc.net/" class="link">
                 <span class="icon">
                   <font-awesome-icon :icon="['fab', 'twitter-square']" size="2x" />
                 </span>

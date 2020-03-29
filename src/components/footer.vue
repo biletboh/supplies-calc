@@ -5,7 +5,7 @@
       <strong>Калькулятор запасів</strong>. Ліцензія <a href="http://opensource.org/licenses/mit-license.php" class="link">MIT</a>.
       </p>
       <p>
-      Сторінка не збирає жодних даних про користувачів.
+      Сторінка не збирає даних про користувачів. Сервіс некомерційний. Тут ніколи не буде реклами.
       </p>
       <p><a class="link" href="mailto:suppliescalcnet@gmail.com">suppliescalcnet@gmail.com</a></p>
       <p>
