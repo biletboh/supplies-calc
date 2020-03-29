@@ -1,5 +1,5 @@
 <template>
-  <button @click="isActive = !isActive; addOnProducts(); $emit('calculate', supplies);" v-bind:class="{active: isActive}" class="button">
+  <button @click="isActive = !isActive; addOnProducts();" v-bind:class="{active: isActive}" class="button">
     <span class="icon is-small">
       <font-awesome-icon :icon="['fas', 'plus']" />
     </span>
@@ -19,30 +19,34 @@ export default {
 
   data: function () {
     return {
-      isActive: false,
-      products: products
+      products: products,
+      isActive: this.active
     }
   },
 
   methods: {
 
     addOnProducts: function() {
+
       const foodTypes = this.supplies.foodTypes
       const type = this.products[this.type]
+      const deepCopyType= JSON.parse(JSON.stringify(type))
 
       if (this.isActive) {
-        foodTypes.push(type)
+        foodTypes.push(deepCopyType)
 
       } else {
 
         for (let index in this.supplies.foodTypes) {
 
-          if (foodTypes[index].name == type.name) {
+          if (foodTypes[index].name == deepCopyType.name) {
             foodTypes.splice(index, 1)
           }
         }
 
       }
+
+      this.$emit('calculate', this.supplies)
     },
   },
 

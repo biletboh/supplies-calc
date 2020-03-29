@@ -289,7 +289,9 @@ export default {
     setTemplate() {
       const name = this.selectedTemplate
       if (name) {
-        this.supplies.foodTypes = this.productTemplates[name]['foodTypes']
+        const templates = this.productTemplates[name]['foodTypes']
+        const deepCopyTemplates = JSON.parse(JSON.stringify(templates))
+        this.supplies.foodTypes = deepCopyTemplates
       } else {
         this.supplies.foodTypes = []
       }
