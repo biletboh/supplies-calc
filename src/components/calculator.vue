@@ -23,7 +23,7 @@
                 <div class="field">
                   <label class="label">Люди</label>
                   <div class="control">
-                    <input v-model="supplies.persons" @input="$emit('calculate', supplies)" class="input" type="number" placeholder="Кількість">
+                    <input v-model.number="supplies.persons" @input="$emit('calculate', supplies)" class="input" type="number" placeholder="Кількість">
                   </div>
                 </div>
               </div>
@@ -82,11 +82,11 @@
                   </div>
                 </div>
               </div>
-              <div class="column is-two-fifth">
+              <div v-if="foodType.type != 'longTerm'" class="column is-two-fifth">
                 <div class="field">
                   <label class="label">Порції / день</label>
                   <div class="control">
-                    <input v-model="foodType.meals" @input="$emit('calculate', supplies)" class="input" type="number" placeholder="Кількість">
+                    <input v-model.number="foodType.meals" @input="$emit('calculate', supplies)" class="input" type="number" placeholder="Кількість">
                   </div>
                 </div>
               </div>
@@ -106,7 +106,24 @@
                     </div>
                   </div>
                 </div>
-                <div v-if="product.type == 'base'" class="column is-two-fifth">
+                <div v-if="foodType.type == 'longTerm' && product.type !== 'custom'" class="column is-two-fifth">
+                  <label class="label">Кількість / Період</label>
+                  <div class="field has-addons">
+                    <div class="control">
+                      <input v-model.number="product.quantity" @input="$emit('calculate', supplies)" class="input" type="number" placeholder="">
+                    </div>
+                    <div class="control">
+                      <div class="select">
+                        <select v-model.number="product.consumptionRate" @change="$emit('calculate', supplies)">
+                          <option value="1">день</option>
+                          <option value="7">тиждень</option>
+                          <option value="30">місяць</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div v-else-if="product.type == 'base'" class="column is-two-fifth">
                   <label class="label">Порції</label>
                   <div class="field has-addons">
                     <div class="control">
@@ -114,7 +131,7 @@
                     </div>
                     <div class="control">
                       <div class="select">
-                        <select v-model="product.container" @input="$emit('calculate', supplies)">
+                        <select v-model="product.container" @change="$emit('calculate', supplies)">
                           <option value="упаковки">на 1 упаковку</option>
                           <option value="штуки">на 1 штуку</option>
                           <option value="кг">на 1 кг</option>
@@ -130,11 +147,11 @@
                   <label class="label">Кількість</label>
                   <div class="field has-addons">
                     <div class="control">
-                      <input v-model="product.quantity" @input="$emit('calculate', supplies)" class="input" type="number" placeholder="">
+                      <input v-model.number="product.quantity" @input="$emit('calculate', supplies)" class="input" type="number" placeholder="">
                     </div>
                     <div class="control">
                       <div class="select">
-                        <select v-model="product.container" @input="$emit('calculate', supplies)">
+                        <select v-model="product.container" @change="$emit('calculate', supplies)">
                           <option value="упаковки">упаковки</option>
                           <option value="штуки">штуки</option>
                           <option value="кг">кг</option>
@@ -169,7 +186,10 @@
     </div>
     <div class="field is-grouped">
       <p class="control">
-      <button @click="addFoodType" class="button add-products">Додати вид продуктів</button>
+      <button @click="addFoodType('base')" class="button add-products">Додати продукти</button>
+      </p>
+      <p class="control">
+      <button @click="addFoodType('longTerm')" class="button add-products">Додати довгострокові продукти</button>
       </p>
     </div>
   </div>
@@ -194,17 +214,20 @@ export default {
   },
 
   methods: {
-    addFoodType: function() {
+    addFoodType: function(type) {
+
       this.supplies.foodTypes.push(
         {
           name: '',
           meals: null,
+          type: type,
           products: [
             {
               name: '',
               container: 'упаковки',
               portions: null,
               type: 'base',
+              consumptionRate: 7,
               quantity: null
             }
           ]

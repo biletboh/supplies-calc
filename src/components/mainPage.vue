@@ -117,17 +117,27 @@ export default {
 
       this.supplyList = []
 
-      for (let foodTypes of value.foodTypes) {
-        for (let product of foodTypes.products) {
-          const productsCount = foodTypes.products.length;
+      for (let foodType of value.foodTypes) {
+        for (let product of foodType.products) {
 
-          if (product.type == 'base' && foodTypes.meals && product.portions && value.persons) {
-            let proportion = (foodTypes.meals / product.portions / productsCount) * value.persons * value.days
-            proportion = Math.round((proportion + Number.EPSILON) * 100) / 100
-            product["proportion"] = proportion
-          }
-          else if (product.type == 'custom' && product.quantity) {
-            product["proportion"] = product.quantity
+          if (value.persons) {
+            if (foodType.type == 'longTerm' && product.type != 'custom' && product.quantity && product.consumptionRate) {
+              const consumption = value.days / product.consumptionRate
+              let proportion = product.quantity * value.persons * consumption
+              proportion = Math.round((proportion + Number.EPSILON) * 100) / 100
+              product["proportion"] = proportion
+
+            } else if (product.type == 'base' && foodType.meals && product.portions) {
+
+              const productsCount = this.defineProductListSize(foodType.products)
+              let proportion = (foodType.meals / product.portions / productsCount) * value.persons * value.days
+              proportion = Math.round((proportion + Number.EPSILON) * 100) / 100
+              product["proportion"] = proportion
+
+            } else if (product.type == 'custom' && product.quantity || product.type == 'template' && product.quantity) {
+
+              product["proportion"] = product.quantity
+            }
           }
 
           if (product.name) {
@@ -139,6 +149,18 @@ export default {
       this.makeListToCopy(this.supplyList)
 
       return this.supplyList
+    },
+
+    defineProductListSize(products) {
+      let size = 0
+
+      for (let product of products) {
+        if (product.portions && product.type != 'custom') {
+          size += 1
+        }
+      }
+
+      return size
     },
 
     makeListToCopy(supplyList) {

@@ -7,9 +7,9 @@
       {
         "name": "Мило",
         "container": "штуки",
-        "portions": null,
-        "type": "custom",
-        "quantity": 8
+        "portions": 0.15,
+        "type": "template",
+        "quantity": null
       }
     ]
   },
