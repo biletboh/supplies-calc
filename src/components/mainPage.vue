@@ -137,9 +137,9 @@ export default {
               proportion = Math.round((proportion + Number.EPSILON) * 100) / 100
               product["proportion"] = proportion
 
-            } else if (product.type == 'custom' && product.quantity || product.type == 'template' && product.quantity) {
+            } else if (product.type == 'custom' && product.quantity) {
 
-              product["proportion"] = product.quantity
+              product["proportion"] = product.quantity * value.persons
             }
           }
 
