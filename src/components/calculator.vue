@@ -63,7 +63,7 @@
                     @calculate="$emit('calculate', supplies)"
                     />
                   </p>
-                  <p class="control">
+                  <p class="control control-blue">
                   <addOnButton
                     v-bind:supplies="supplies"
                     v-bind:type="'alcohol'"
@@ -351,6 +351,7 @@ export default {
 .add-products {
   margin-bottom: 24px;
 }
+
 
 @media (max-width: 768px) {
   .delete-container {

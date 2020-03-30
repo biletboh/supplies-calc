@@ -73,5 +73,18 @@ export default {
 .button-scroll.is-focused:not(:active) {
   box-shadow: 0 0 0 0.125em rgb(87, 184, 135, 0.25);
 }
-</style>
 
+.control-blue .button.active,
+.control-blue .button-scroll:hover,
+.control-blue .button-scroll:active,
+.control-blue .button-scroll:focus {
+  border-color: #366E8F;
+  background-color: #366E8F;
+  color: #FFFFFF;
+}
+
+.control-blue .button-scroll:focus:not(:active),
+.control-blue .button-scroll.is-focused:not(:active) {
+  box-shadow: 0 0 0 0.125em rgb(54, 110, 143, 0.25);
+}
+</style>
