@@ -5,6 +5,7 @@
       <div class="columns">
         <div class="column">
           <div class="info">
+            <img src='@/assets/img/supplies-calc-logo.svg' class="logo">
             <h1 class="title">{{ msg }}</h1>
             <p class="description">Простий калькулятор допоможе порахувати запаси їжі на карантин. Варто запастися продуктами та іншими необхідними речима на  <a href="https://www.nytimes.com/interactive/2020/world/coronavirus-maps.html" class="link">30 днів</a>. Зробивши підрахунки, ви впевнетеся, що всього достатньо і не будете стимулювати дефіцит.</p>
           </div>
@@ -192,8 +193,13 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.logo {
+  max-height: 140px;
+  margin-bottom: 4px;
+}
+
 .description {
-  margin-bottom: 48px;
+  margin-bottom: 24px;
 }
 
 .button-scroll {
